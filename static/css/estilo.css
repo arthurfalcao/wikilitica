@@ -6,11 +6,6 @@ ul {
     list-style-type: none;
     margin: 0;
     overflow: hidden;
-    background-color: #bdc3c7;
-	/*
-    border-left: 1px solid;
-	border-color: #95a5a6;
-	*/
 }
 
 li {
@@ -21,9 +16,10 @@ li a {
     display: block;
     color: black;
     text-align: center;
+ 
     padding: 14px 20px;
     text-decoration: none;
-    margin: 36px 0px 0px 0px;
+    margin: 37px 0px 0px 0px;
 }
 
 
@@ -32,22 +28,12 @@ li a:hover {
     color: white;
 }
 
-#menu{
-	width: 70%;
-    height: 45px;
-	float: right;
-    
-}
-
-#box-logo{
-	width: 30%;
-	float:left;
-	background: #bdc3c7;
-}
-.logomarca{
-	margin-left: 20px;
-}
-
 #header{
-    height: 86px;
+    width:100%;
+    background-color: #bdc3c7;
+}
+
+.imagem {
+    display: block;
+    float:left;
 }
