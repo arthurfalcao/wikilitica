@@ -7,8 +7,10 @@ ul {
     margin: 0;
     overflow: hidden;
     background-color: #bdc3c7;
+	/*
     border-left: 1px solid;
 	border-color: #95a5a6;
+	*/
 }
 
 li {
@@ -31,14 +33,14 @@ li a:hover {
 }
 
 #menu{
-	width: 1060px;
+	width: 70%;
     height: 45px;
 	float: right;
     
 }
 
 #box-logo{
-	width: 300px;
+	width: 30%;
 	float:left;
 	background: #bdc3c7;
 }
