@@ -16,7 +16,6 @@ li a {
     display: block;
     color: white;
     text-align: center;
- 
     padding: 14px 20px;
     text-decoration: none;
     margin: 37px 0px 0px 0px;
@@ -38,6 +37,7 @@ li a:hover {
     float:left;
 }
 
+/* Dropdown */
 
 li a, .dropbtn {
     display: inline-block;
@@ -45,7 +45,7 @@ li a, .dropbtn {
     text-align: center;
     padding: 14px 16px;
     text-decoration: none;
-}
+ }
 
 li a:hover, .dropdown:hover .dropbtn {
     background-color: #2980b9;
@@ -79,4 +79,15 @@ li.dropdown {
 .dropdown:hover .dropdown-content {
     display: block;
 
+}
+
+/* Copyright */
+
+footer#rodape{
+    clear: both;
+    border-top: 1px solid #606060;
+}
+
+footer#rodape p{
+    text-align: center;
 }
