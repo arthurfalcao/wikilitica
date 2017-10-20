@@ -1,0 +1,19 @@
+	body{background-color: #eeeeee}
+		#l1{
+			color: #585858;
+			font-family: Century Gothic;
+			font-weight: bold;
+		}
+		.bt{background-color:#424242;
+			color: ##F2F2F2;
+			border: 0px;
+			width: 75px;
+			height: 25px;
+		}
+		input:hover{
+			border: 2px solid 
+		}
+		input:focus{
+			border: 2px solid;
+			background-color: #E6E6E6;
+		}

@@ -3,19 +3,25 @@
 <head>
 	<meta charset="utf-8">
 	<title>Login</title>
+	<link rel="stylesheet" type="text/css" href="static/css/estilo_login.css">
 </head>
 <body>
-
+<a href="./login.html">
+				<img  class="imagem"  src="./static/img/login.png" alt="logo" height="20px" width="80px">
+			</a>
 	<form action="">
-		Usuário:<br>
-		<input type="text" name="usuario"><br><br>
-		Senha:<br>
+		<label id="l1">Usuário:</label><br>
+		<input type="text" name="usuario" id="f1"><br><br>
+		<label id="l1">Senha:</label><br>
 		<input type="password" name="senha"><br><br>
-		<input type="radio" value="Lembrar senha"> Lembrar senha
+		<input type="radio" value="Lembrar Senha"> <label id="l1">Lembrar Senha</label>
 		<br><br>
-		<input type="submit" value="Entrar">
+		<input type="submit" class="bt" value="Entrar">
+		<input type="reset" class="bt" value="Cancelar">
 	</form>
-
+	<footer id="rodape">
+		<p> Copyright &copy 2017</p>
+	</footer>
 
 </body>
 </html>
