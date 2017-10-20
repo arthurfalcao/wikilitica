@@ -7,11 +7,15 @@ body{
 
 div#login{
 	text-align: center;
+	border: solid;
+	border-radius: 10px;
+	margin: 50px;
 }
 
 .imagem{
 	width: 10%;
 	height: 100%;
+	padding-top: 20px;
 }
 
 #l1{
