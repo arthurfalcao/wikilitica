@@ -1,3 +1,5 @@
+@charset "UTF-8";
+
 body{
 	margin: 0 auto;
     font-family: "Century Gothic", CenturyGothic, AppleGothic, sans-serif;
@@ -34,7 +36,8 @@ li a:hover {
 
 .imagem {
     display: block;
-    float:left;
+    float: left;
+    width: 14%;
 }
 
 /* Dropdown */
@@ -45,7 +48,7 @@ li a, .dropbtn {
     text-align: center;
     padding: 14px 16px;
     text-decoration: none;
- }
+}
 
 li a:hover, .dropdown:hover .dropbtn {
     background-color: #2980b9;
