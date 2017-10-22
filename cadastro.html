@@ -3,20 +3,33 @@
 <head>
 	<meta charset="utf-8">
 	<title>Cadastro</title>
+	<link rel="stylesheet" type="text/css" href="static/css/cadastro.css">
 </head>
 <body>
 	<div id="cadastro">
+		<a href="./cadastro.html">
+			<img  class="imagem"  src="./static/img/registro.png" alt="logo" height="20px" width="80px">
+		</a>
 		<form name="cadastro" method="post" action="">
-			Nome: <input type="text" name="nome">
-			Sobrenome: <input type="text" name="sobrenome"><br>
-			Usuário: <input type="text" name="usuario"><br>
-			País: <input type="text" name="estado"><br>
-			Estado: <input type="text" name="estado">
-			Cidade: <input type="text" name="cidade"><br>
-			E-mail: <input type="text" name="email"><br>
-			Senha: <input type="password" name="senha"><br><br>
-			<input type="submit" value="Cadastrar">
-			<input type="reset" value="Cancelar">
+			<label>Nome:  </label>
+			<input type="text" class="br" name="nome"><br>
+			<label>Sobrenome: </label>
+			<input type="text" class="br" name="sobrenome"><br><br>
+			<label>Usuário: </label>
+			<input type="text" class="br" name="usuario"><br><br>
+			<label>País: </label>
+			<input type="text"  class="br" name="pais"><br>
+			<label >Cidade: </label>
+			<input type="text" class="br" name="cidade"><br>
+			<label>Estado: </label>
+			<input type="text" class="br" name="estado"><br><br>
+			<label>E-mail: </label>
+			<input type="text" class="br" name="email"><br>
+			<label>Senha:  </label>
+			<input class="br" type="password" name="senha"><br><br>
+			<input type="radio" value="lembrar cadastro"> Lembrar Cadastro<br><br>
+			<input class="bt" type="submit" value="Cadastrar">
+			<input class="bt" type="reset" value="Cancelar">
 		</form>
 	</div>
 	<footer id="rodape">
