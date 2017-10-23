@@ -4,13 +4,13 @@ body{
 	margin: 0 auto;
     font-family: "Century Gothic", CenturyGothic, AppleGothic, sans-serif;
 }
-ul {
+ #menuhorizontal ul {
     list-style-type: none;
     margin: 0;
     overflow: hidden;
 }
 
-li {
+#menuhorizontal li {
     float: left;
 }
 
@@ -90,6 +90,33 @@ li.dropdown {
 
 }
 
+#buscar {
+    margin:10px;
+    border: 1px solid #606060;
+    width: 20%;
+    border-radius: 10px;
+    padding: 5px;
+    background: #ecf0f1;
+}
+
+#buscar img{
+    float: right;
+}
+#buscar input{
+    font-style: italic;
+    width: 50%;
+    border:none;
+    background: none;
+    overflow: none;
+}
+#menuvertical {
+    border: 1px solid #606060;
+    border-radius: 10px;
+    margin: 10px;
+    background: #ecf0f1;
+    padding: 5px;
+    width:20%;
+}
 /* Copyright */
 
 footer#rodape{
