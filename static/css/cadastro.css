@@ -10,9 +10,9 @@ div#cadastro{
 label{
 	color: black;
 	font-family: Century Gothic, monospace;
-	position:absolute;
-    left:550px;
-    margin-right:5px;
+	margin-right:5px;
+
+    
 }
 .bt{
 	background-color:#1C1C1C;
@@ -26,12 +26,6 @@ label{
 	height: 130%;
 	padding-top: 20px;
 }
-#l2{
-	color: black;
-	font-family: Century Gothic, monospace;
-	text-align: center;
-}
 .br{
-	position: absolute;
-	left: 640px;
+	position: center;
 }
