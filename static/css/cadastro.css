@@ -6,14 +6,9 @@ div#cadastro{
 	border: solid;
 	border-radius: 10px;
 	margin: 30px;
-}
-label{
-	color: black;
-	font-family: Century Gothic, monospace;
-	margin-right:5px;
 
-    
 }
+
 .bt{
 	background-color:#1C1C1C;
 	color: #FFFFFF;
@@ -26,6 +21,12 @@ label{
 	height: 130%;
 	padding-top: 20px;
 }
-.br{
-	position: center;
+#formata{
+	color: black;
+	font-family: Century Gothic, monospace;
+	font-size: 15px;
+}
+footer#rodape{
+    clear: both;
+    text-align: center;
 }
