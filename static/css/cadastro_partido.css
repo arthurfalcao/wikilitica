@@ -1,0 +1,25 @@
+label{
+color: black;
+font-family: Century Gothic, monospace;
+}
+div#cadastro_partido{
+	text-align: center;
+	border: solid;
+	border-radius: 10px;
+	margin: 50px;
+}
+body{
+	background-color: #eeeeee;
+}
+#bt{
+	background-color:#1C1C1C;
+	color: #FFFFFF;
+	border: 0px;
+	width: 75px;
+	height: 25px;
+}
+#img{
+	width: 20%;
+	height: 120%;
+	padding-top: 20px;
+}

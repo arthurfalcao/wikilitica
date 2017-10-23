@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>cadastro_partido</title>
+	<meta charset="utf-8">
+	<link rel="stylesheet" type="text/css" href="static/css/cadastro_partido.css">
+</head>
+<body>
+<div id="cadastro_partido">
+<a href="./html">
+	<img  id="img"  src="./static/img/logo c_partido.png" alt="logo" height="20px" width="80px">
+</a>
+	<br><label>*Nome Completo: </label><br>
+	<input type="text" name="Nome"><br>
+	<label>*Sígla: </label><br>
+	<input type="text" name="Sigla"><br>
+	<label>*Presidente: </label><br>
+	<input type="text" name="Presidente"><br>
+	<label>*Data de Fundação: </label><br>
+	<input type="text" name="data" value="dd/mm/aaaa"  size ="7"><br>	
+	<label>*Espectro: </label><br>
+<select name="Partidos">
+	<option value="PT" selected="selected">Direita</option>
+	<option value="PSDB">Esquerda</option><br>
+</select>
+	<br><br><input  id="bt" type="submit" value="Cadastrar">
+	<input id="bt" type="reset" value="Limpar"><br><br>
+</div>
+</body>
+</html>
