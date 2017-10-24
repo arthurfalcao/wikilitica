@@ -6,44 +6,45 @@
 	<link rel="stylesheet" type="text/css" href="static/css/estilo.css">
 </head>
 <body>
-	<div id="header">
-		<a href="./index.html">
-			<img  class="imagem"  src="./static/img/WikiLítica_logo.png" alt="logo" height="80px" width="270px">
-		</a>
-		<div id = "menuhorizontal">
-			<ul>
-				<li class="dropdown">
-					<a href="javascript:void(0)" class="dropbtn">Cadastros</a>
-					<div class="dropdown-content">
-						 <a href="#">Candidatos e Partidos</a>
-						 <a href="#">Estados e Municípios</a>
-					</div>
-				</li>
-				<li><a href="#">Partidos</a></li>
-				<li><a href="#">Contribuir</a></li>    
-				<li><a href="#">Sobre</a></li>   
-				<li style="float:right; margin-right: 5%"><a href="login.html">Login</a></li> 
-				<li style="float:right"><a href="cadastro.html">Cadastro</a></li>
-			</ul>
+	<div class = "content" id="master">
+		<div id="header">
+			<a href="./index.html">
+				<img  class="imagem"  src="./static/img/WikiLítica_logo.png" alt="logo" height="80px" width="270px">
+			</a>
+			<div id = "menuhorizontal">
+				<ul>
+					<li class="dropdown">
+						<a href="javascript:void(0)" class="dropbtn">Cadastros</a>
+						<div class="dropdown-content">
+							 <a href="#">Candidatos e Partidos</a>
+							 <a href="#">Estados e Municípios</a>
+						</div>
+					</li>
+					<li><a href="#">Partidos</a></li>
+					<li><a href="#">Contribuir</a></li>    
+					<li><a href="#">Sobre</a></li>  
+					<li style="float:right; margin-right: 10% auto"><a href="login.html">Login</a></li> 
+					<li style="float:right; margin-right: 5% auto"><a href="cadastro.html">Cadastro</a></li>
+				</ul>
+			</div>
+		</div>
+				<ul>
+					<li id="busca"><form action="#"><input type="text" name="busca" placeholder="Encontre na WikiLítica"></form></li>
+				</u>
+	</div>
+	<div class="corpo">
+		<div class="corpo" id="cabecalho">
+			<h1>Bem-Vindo à Wikilítica!</h1>
+		</div>
+		<div class="corpo" id="conteudo">
+			<h2>Aqui vai ficar o Conteúdo</h2>
+			<p>A política não é um bicho de sete cabeças nem é um espaço por onde só circulam corruptos. Ela é uma atividade que se pode realizar no dia a dia. Para isso, basta conhecer o funcionamento dos órgãos públicos e entender que instrumentos existem que possibilitam exercer uma atuação política na sociedade. É com esse espírito que a Gazeta do Povo começa hoje a campanha Política Cidadã.</p>
+			<p>Como a política está presente na sociedade sob vários aspectos, a campanha não vai se restringir à editoria Vida Pública. Irá permear todo o jornal. Quanto mais envolvimento a campanha tiver na vida dos cidadãos, mais facil será melhorar a qualidade da política brasileira.</p>
+			<p>A política não é um bicho de sete cabeças nem é um espaço por onde só circulam corruptos. Ela é uma atividade que se pode realizar no dia a dia. Para isso, basta conhecer o funcionamento dos órgãos públicos e entender que instrumentos existem que possibilitam exercer uma atuação política na sociedade. É com esse espírito que a Gazeta do Povo começa hoje a campanha Política Cidadã.</p>
 		</div>
 	</div>
-	<div id="buscar">
-		<a href="#"><img src="./static/img/lupa.png"></a>
-		<form action="#">
-			Busca: <input type="text" name="busca" placeholder="Encontre na WikiLítica">
-		</form>
-	</div>
-	<div id="menuvertical">
-		<ul>
-			<li><a href="#">Valor1</a></li>
-			<li><a href="#">Valor2</a></li>    
-			<li><a href="#">Valor3</a></li>   
-			<li><a href="#">Valor4</a></li> 
-			<li><a href="#">Valor5</a></li>
-		</ul>
-	</div>
-	<footer id="rodape">
+</body>
+	<footer class="footer" id="rodape">
 		<p>Copyright &copy 2017 FlowTeam</p>
 	</footer>
-</body>
 </html>

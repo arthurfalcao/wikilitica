@@ -1,5 +1,10 @@
 @charset "UTF-8";
 
+* {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
 body{
 	margin: 0 auto;
     font-family: "Century Gothic", CenturyGothic, AppleGothic, sans-serif;
@@ -29,11 +34,16 @@ li a:hover {
     color: white;
 }
 
+/* Define Tamanho do menu e centraliza */
 #header{
+    width:75%;
+    margin: 0 auto;
+}
+#master{
     width:100%;
+    margin: 0 auto;
     background-color: #ecf0f1;
     border-bottom: 1px solid #606060;
-    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
 }
 
 .imagem {
@@ -90,27 +100,20 @@ li.dropdown {
     border-top:1px solid #606060;
 
 }
+#busca{
 
-#buscar {
-    margin:10px;
+    list-style-image: url("../img/lupa.png");
+    width:30%;
+}
+#busca input{
+    font-style: italic;
+    background: none;
+    box-shadow: 0 0 0 0;
+    outline: 0;
     border: 1px solid #606060;
-    width: 20%;
+    width: 50%;
     border-radius: 10px;
     padding: 5px;
-    background: #ecf0f1;
-
-    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
-}
-
-#buscar img{
-    float: right;
-}
-#buscar input{
-    font-style: italic;
-    width: 50%;
-    border:none;
-    background: none;
-    overflow: none;
 }
 #menuvertical {
     border: 1px solid #606060;
@@ -119,7 +122,25 @@ li.dropdown {
     background: #ecf0f1;
     padding: 5px;
     width:20%;
-     box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+}
+
+/* Corpo Site */
+
+.corpo {
+     width: 75%;
+     margin:0 auto;
+  
+}
+#cabecalho{
+    text-align: center;
+    padding: 5px;
+
+}
+.corpo h2{
+    border-bottom: 1px solid black;
+}
+.corpo p{
+    text-align: justify;
 }
 /* Copyright */
 
