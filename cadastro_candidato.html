@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+	<meta charset="utf-8">
+	<title>Cadastro do Candidato</title>
+	<meta charset="utf-8">
+	<link rel="stylesheet" type="text/css" href="static/css/cadastro_candidato.css">
+
+</head>
+<body>
+	<div id="cadastro_candidato">
+		<a href="cadastro_candidato.html">
+			<img  id="img"  src="./static/img/logo c_politco.png" alt="logo" height="20px" width="80px">
+		</a>
+		<form><br>
+			<table>
+				<tr><td>Função:</td><td>
+					<select name="Tipo">
+						<option value="selecione" selected="selected">Selecione</option>
+						<option value="Vereador">Vereador</option>
+						<option value="Prefeito">Prefeito</option>
+						<option value="D.Estadual">D.Estadual</option>
+						<option value="D.Federal">D.Federal</option>
+						<option value="Governador">Governador</option>
+						<option value="Senador">Senador</option>
+						<option value="Presidente">Presidente</option>
+				 	</select></td></tr>
+				<tr><td>Nome:</td><td><input type="text" name="Nome"></td></tr>
+				<tr><td>Sexo:</td><td>
+					<select>
+						<option value="selecione" selected="selected">Selecione</option>
+						<option value="masculino">Masculino</option>
+						<option value="feminino">Feminino</option>
+					</select></td></tr>
+				<tr><td>Partido atual:</td><td>
+					<select name="Partidos">
+						<option value="selecione" selected="selected">Selecione</option>
+						<option value="PT"">PT</option>
+						<option value="PSDB">PSDB</option>
+						<option value="REDE">REDE</option>
+				  </select></td></tr>
+				<tr><td>Profissão:</td><td><input type="text" name="profissao"></td></tr>
+			</table>
+			<br><input  id="bt" type="submit" value="Cadastrar"> <input id="bt" type="reset" value="Limpar"><br><br>
+		</form>
+	</div>
+</body>
+</html>

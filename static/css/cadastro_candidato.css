@@ -1,22 +1,20 @@
-tr,td{
-color: black;
-font-family: Century Gothic, monospace;
-text-align: left;
+body{
+	background-color: #eeeeee;
 }
+
 #img{
 	width: 20%;
 	height: 120%;
 	padding-top: 20px;
 }
+
 div#cadastro_candidato{
 	text-align: center;
 	border: solid;
 	border-radius: 10px;
 	margin: 50px;
 }
-body{
-	background-color: #eeeeee;
-}
+
 #bt{
 	background-color:#1C1C1C;
 	color: #FFFFFF;
@@ -24,7 +22,14 @@ body{
 	width: 75px;
 	height: 25px;
 }
+
 table{
 	margin-right: auto;
 	margin-left: auto;
+}
+
+tr,td, label{
+	color: black;
+	font-family: Century Gothic, monospace;
+	text-align: left;
 }
