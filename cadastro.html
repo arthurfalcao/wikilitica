@@ -12,16 +12,23 @@
 		</a>
 		
 		<form name="cadastro" method="post" action="">
-			<pre id="formata">
-Nome:      <input type="text" class="br" name="nome">
-Sobrenome: <input type="text" class="br" name="sobrenome"><br><br>
-País:      <input type="text"  class="br" name="pais">
-Cidade:    <input type="text" class="br" name="cidade">
-Estado:    <input type="text" class="br" name="estado"><br><br>
-E-mail:    <input type="text" class="br" name="email">
-Usuário:   <input type="text" class="br" name="usuario">
-Senha:     <input class="br" type="password" name="senha"><br><br>
-			</pre>
+			<table>
+				<tr><td>Email:</td><td><input type="text" class="br" name="Email"></td></tr>
+				<tr><td>Senha:</td><td><input type="password"  class="br" name="senha"></td></tr>
+				<tr><td>CPF:</td><td><input type="text" class="br" name="cpf"></td></tr>
+				<tr><td>Nome Completo:</td><td><input type="text" class="br" name="nome"></td></tr>
+				<tr><td>Telefone:</td><td><input type="text" class="br" name="Telefone"></td></tr>
+				<tr><td>Data de Nascimento:</td><td><input type="date" class="br" name="datanascimento"></td></tr>
+				<tr><td>Sexo:</td><td><select name="Sexo">
+						<option selected="selected">Selecione</option>
+						<option value="masculino">Masculino</option>
+						<option value="feminino">Feminino</option>
+					  </select></td></tr>    
+				<tr><td>Endereço:</td><td><input  class="br" type="text" name="Endereço"></td></tr>
+				<tr><td>Cidade:</td><td><input  class="br" type="text" name="cidade"></td></tr>
+				<tr><td>Estado:</td><td><input  class="br" type="text" name="estado"></td></tr>
+			</table>
+			<br>
 			<input class="bt" type="submit" value="Cadastrar">
 			<input class="bt" type="reset" value="Cancelar">
 			<br><br>

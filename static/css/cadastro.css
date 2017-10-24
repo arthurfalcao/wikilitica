@@ -21,12 +21,16 @@ div#cadastro{
 	height: 130%;
 	padding-top: 20px;
 }
-#formata{
+tr,td{
 	color: black;
 	font-family: Century Gothic, monospace;
-	font-size: 15px;
+	text-align: left;
 }
 footer#rodape{
     clear: both;
     text-align: center;
+}
+table{
+	margin-right: auto;
+	margin-left: auto;
 }
