@@ -10,22 +10,19 @@
 <a href="./html">
 	<img  id="img"  src="./static/img/logo c_partido.png" alt="logo" height="20px" width="80px">
 </a>
-	<br><label>*Nome Completo: </label><br>
-	<input type="text" name="Nome"><br>
-	<label>*Sígla: </label><br>
-	<input type="text" name="Sigla"><br>
-	<label>*Presidente: </label><br>
-	<input type="text" name="Presidente"><br>
-	<label>*Data de Fundação: </label><br>
-	<input type="text" name="data" value="dd/mm/aaaa"  size ="7"><br>	
-	<label>*Espectro: </label><br>
-<select name="Partidos">
-	<option value="PT" selected="selected">Direita</option>
-	<option value="PSDB">Esquerda</option><br>
-</select>
-	<br><br><input  id="bt" type="submit" value="Cadastrar">
-	<input id="bt" type="reset" value="Limpar"><br><br>
-	<label>*Opções obrigatórias</label>
+	<form>	
+		<pre id="forma">
+          *Nome Completo:    <input type="text" name="Nome"><br>
+          *Sígla:            <input type="text" name="Sigla"><br>
+          *Presidente:       <input type="text" name="Presidente"><br>
+*Data de Fundação: <input type="text" name="data" value="dd/mm/aaaa"  size ="8"><br>	
+*Espectro:         <select name="Partidos">
+					<option value="PT" selected="selected">Direita</option>
+					<option value="PSDB">Esquerda</option><br></select>
+<br><br><input  id="bt" type="submit" value="Cadastrar"> <input id="bt" type="reset" value="Limpar"><br><br>
+*Opções obrigatórias
+		</pre>
+	</form>
 </div>
 </body>
 </html>

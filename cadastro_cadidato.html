@@ -11,30 +11,29 @@
 <a href="./html">
 			<img  id="img"  src="./static/img/logo c_politco.png" alt="logo" height="20px" width="80px">
 </a>
-<br><label>*Tipo/Nome Completo: </label><br>
-<select name="Tipo">
-	<option value="Vereador" selected="selected">Vereador</option>
-	<option value="Prefeito">Prefeito</option>
-	<option value="D.Estadual">D.Estadual</option>
-	<option value="D.Federal">D.Federal</option>
-	<option value="Governador">Governador</option>
-	<option value="Senador">Senador</option>
-	<option value="Presidente">Presidente</option>
-</select>
-<input type="text" name="Nome"><br>
-<label>*Cidade/Estado Natal: </label><br>
-<input type="text" name="Cid/Est"><br>
-<label>*Data de Nascimento: </label><br>
-	<input type="text" name="data" value="dd/mm/aaaa"  size ="7"><br>
-<label>*Partido: </label><br>
-<select name="Partidos">
-	<option value="PT" selected="selected">PT</option>
-	<option value="PSDB">PSDB</option>
-	<option value="REDE">REDE</option>
-</select>
-<br><br><input  id="bt" type="submit" value="Cadastrar">
-<input id="bt" type="reset" value="Limpar"><br><br>
-<label>*Opções obrigatórias</label>
+	<form>	
+		<table>
+			<tr><td>*Função:</td><td><select name="Tipo">
+						<option value="Vereador" selected="selected">Vereador</option>
+						<option value="Prefeito">Prefeito</option>
+						<option value="D.Estadual">D.Estadual</option>
+						<option value="D.Federal">D.Federal</option>
+						<option value="Governador">Governador</option>
+						<option value="Senador">Senador</option>
+						<option value="Presidente">Presidente</option>
+				 	</select></td></tr>
+			<tr><td>*Nome Completo:</td><td><input type="text" name="Nome"></td></tr>
+			<tr><td>*Cidade/Estado Natal:</td><td><input type="text" name="Cid/Est"></td></tr>
+			<tr><td>*Data de Nascimento:</td><td><input type="text" name="data" value="dd/mm/aaaa"  size ="8"></td></tr>
+			<tr><td>*Partido:</td><td><select name="Partidos">
+					<option value="PT" selected="selected">PT</option>
+					<option value="PSDB">PSDB</option>
+					<option value="REDE">REDE</option>
+				  </select></td></tr>
+		</table>
+		<br><br><input  id="bt" type="submit" value="Cadastrar"> <input id="bt" type="reset" value="Limpar"><br><br>
+	</form>
+		<label>*Opções obrigatórias</label>
 </div>
 </body>
 </html>
