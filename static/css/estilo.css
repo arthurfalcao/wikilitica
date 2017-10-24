@@ -114,6 +114,12 @@ li.dropdown {
     width: 50%;
     border-radius: 10px;
     padding: 5px;
+    -webkit-transition: width 2s; /* For Safari 3.1 to 6.0 */
+    transition: width 2s;
+}
+#busca input:hover{
+    width:100%;
+    background-color: white;
 }
 #menuvertical {
     border: 1px solid #606060;
