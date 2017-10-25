@@ -1,0 +1,194 @@
+@charset "UTF-8";
+
+* {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+body{
+    margin: 0 auto;
+    font-family: "Century Gothic", CenturyGothic, AppleGothic, sans-serif;
+}
+ #menuhorizontal ul {
+    list-style-type: none;
+    margin: 0;
+    overflow: hidden;
+}
+
+#menuhorizontal li {
+    float: left;
+}
+
+nav {
+
+    padding: 5px 0px 0px 0px;
+    float: right;
+}
+nav a{
+    text-decoration: none;
+    text-align: center;
+    font-size: 70%;
+    color: black;
+    padding: 5px;
+}
+nav a:hover{
+    background-color: #2980b9;
+    color: white;
+}
+
+li a {
+    display: block;
+    color: white;
+    text-align: center;
+    text-decoration: none;
+    margin: 37px 0px 0px 0px;
+}
+
+
+li a:hover {
+    background-color: #7f8c8d;
+    color: white;
+}
+
+/* Define Tamanho do menu e centraliza */
+#header{
+    width:75%;
+    margin: 0 auto;
+}
+#master{
+    width:100%;
+    margin: 0 auto;
+    background-color: #ecf0f1;
+    border-bottom: 1px solid #606060;
+}
+
+.imagem {
+    display: block;
+    float: left;
+    width: 14%;
+}
+
+/* Dropdown */
+
+li a, .dropbtn {
+    display: inline-block;
+    color: black;
+    text-align: center;
+    padding: 10px;
+    text-decoration: none;
+    position: relative;
+}
+
+li a:hover, .dropdown:hover .dropbtn {
+    background-color: #2980b9;
+    color: white;
+
+}
+
+li.dropdown {
+    display: inline-block;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f9f9f9;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+}
+
+.dropdown-content a {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+    text-align: left;
+    margin-top: 10px;
+}
+
+.dropdown-content a:hover {
+    background-color: #2980b9;
+}
+
+.dropdown:hover .dropdown-content {
+    display: block;
+    background: #ecf0f1;
+
+}
+#pesquisa{
+    width: 50%;
+    margin-left: 12%;
+}
+#busca{
+
+    list-style-image: url("../img/lupa.png");
+    width:50%;
+}
+#busca input{
+    font-style: italic;
+    background: none;
+    box-shadow: 0 0 0 0;
+    outline: 0;
+    border: 1px solid #606060;
+    width: 50%;
+    border-radius: 10px;
+    padding: 5px;
+    -webkit-transition: width 1s; /* For Safari 3.1 to 6.0 */
+    transition: width 1s;
+}
+#busca input:hover{
+        width:100%;
+        background-color: white;
+
+}
+
+#busca input:focus{
+    background-color: white;
+
+}
+/* Corpo Site */
+
+.corpo {
+     width: 75%;
+     margin:0 auto;
+  
+}
+#cabecalho{
+    text-align: center;
+    padding: 5px;
+
+}
+.corpo h2{
+    border-bottom: 1px solid black;
+}
+.corpo p{
+    text-align: justify;
+}
+
+/* Copyright */
+
+.footer {
+    clear: both;
+    border-top: 1px solid #606060;
+    color: #666;
+    text-align: center;
+    font-size: 80%;
+    bottom:0;
+    width:100%;
+}
+a.link1:link{
+color:#1C1C1C;
+}
+a.link1:visited{
+color:#1C1C1C; 
+}
+a.link1:hover{
+color:#848484;
+background-color:white;  
+}
+   
+a.link1{
+   margin: 4px;
+   
+}
