@@ -2,49 +2,63 @@
 
 body{
 	background-color: #eeeeee;
+	margin: 0 auto;
+	font-family: Century Gothic, monospace;
 }
 
 
-div#login{
+.caixa{
 	text-align: center;
-	border: solid;
 	border-radius: 10px;
-	margin: 50px;
+	margin: 5% auto;
+	width: 40%;
+	height: 100%;
+    background-color: #f9f9f9;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
 }
 
 .imagem{
-	width: 10%;
-	height: 100%;
-	padding-top: 20px;
+	width: 20%;
+	height: 130%;
+	padding: 40px;
 }
-
+form{
+	    width: 60%;
+	    margin: auto;
+}
 #l1{
 	color: black;
-	font-family: Century Gothic, monospace;
+	float:left;
+	
 }
-		
 .bt{
-	background-color:#1C1C1C;
+	background-color:#2980b9;
 	color: #FFFFFF;
 	border: 0px;
 	width: 75px;
 	height: 25px;
+	padding: 4px;
 }
 
-/*	NEGOCIO FEIO DA PORRA	
-input:hover{
-	border: 2px solid;
+input{
+	background: none;
+    box-shadow: 0 0 0 0;
+    outline: 0;
+    border: 1px solid #606060;
+    width: 100%;
+    border-radius: 5px;
+    padding: 4px;
 }
-		
-input:focus{
-	border: 2px solid;
-	background-color: #E6E6E6;
-}
-*/
 
 /* Copyright */
 
-footer#rodape{
+.footer {
     clear: both;
+    border-top: 1px solid #606060;
+    color: #666;
     text-align: center;
+    font-size: 80%;
+    bottom:0;
 }
