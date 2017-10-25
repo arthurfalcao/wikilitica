@@ -19,11 +19,27 @@ body{
     float: left;
 }
 
+nav {
+
+    padding: 5px 0px 0px 0px;
+    float: right;
+}
+nav a{
+    text-decoration: none;
+    text-align: center;
+    font-size: 70%;
+    color: black;
+    padding: 5px;
+}
+nav a:hover{
+    background-color: #2980b9;
+    color: white;
+}
+
 li a {
     display: block;
     color: white;
     text-align: center;
-    padding: 14px 20px;
     text-decoration: none;
     margin: 37px 0px 0px 0px;
 }
@@ -58,8 +74,9 @@ li a, .dropbtn {
     display: inline-block;
     color: black;
     text-align: center;
-    padding: 14px 16px;
+    padding: 10px;
     text-decoration: none;
+    position: relative;
 }
 
 li a:hover, .dropdown:hover .dropbtn {
@@ -124,14 +141,6 @@ li.dropdown {
     width:100%;
     background-color: white;
 }
-#menuvertical {
-    border: 1px solid #606060;
-    border-radius: 10px;
-    margin: 10px;
-    background: #ecf0f1;
-    padding: 5px;
-    width:20%;
-}
 
 /* Corpo Site */
 
@@ -162,7 +171,6 @@ li.dropdown {
     text-align: center;
     padding: 1em;
     font-size: 80%;
-    position:absolute;
     bottom:0;
     width:100%;
 }
