@@ -99,10 +99,14 @@ li.dropdown {
     background: #ecf0f1;
 
 }
+#pesquisa{
+    width: 50%;
+    margin-left: 12%;
+}
 #busca{
 
     list-style-image: url("../img/lupa.png");
-    width:30%;
+    width:50%;
 }
 #busca input{
     font-style: italic;
