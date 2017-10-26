@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+	<meta charset="utf-8">
+	<title>Cadastro do Candidato</title>
+	<meta charset="utf-8">
+	<link rel="stylesheet" type="text/css" href="static/css/cadastro_cidade_estado.css">
+
+</head>
+<body>
+	<div id="cadastro_cidade_estado">
+		<a href="cadastro_candidato.html">
+			<img  id="img"  src="./static/img/logo_c_cidade-estado.png" alt="logo" height="20px" width="80px">
+		</a>
+		<form><br>
+			<table>
+				<tr><td>Tipo:</td><td>
+					<select name="Tipo">
+						<option value="selecione" selected="selected">Selecione</option>
+						<option value="Estado">Estado</option>
+						<option value="Cidade">Cidade</option>
+					</select></td></tr>
+				<tr><td>Nome:</td><td><input type="text" name="Nome"></td></tr>
+				<tr><td>População:</td><td><input type="number" name="População"></td></tr>
+				<tr><td>IDH:</td><td><input type="number" name="População"></td></tr>
+				<tr><td>Aptos para votar:</td><td><input type="number" name="A_votar"></td></tr>
+			<tr><td>Governante Atual:</td><td>
+					<select name="Tipo">
+						<option value="selecione" selected="selected">Selecione</option>
+						<option value="Estado">Governador</option>
+						<option value="Cidade">Prefeito</option>
+					</select></td></tr>
+				<tr><td>Nome:</td><td><input type="text" name="Nome"></td></tr>
+			</table>
+			<br><input  id="bt" type="submit" value="Cadastrar"> <input id="bt" type="reset" value="Limpar"><br><br>
+		</form>
+	</div>
+</body>
+</html>
