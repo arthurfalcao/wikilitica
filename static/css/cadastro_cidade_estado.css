@@ -1,0 +1,44 @@
+body{
+	background-color: #eeeeee;
+}
+
+#img{
+	width: 20%;
+	height: 120%;
+	padding-top: 20px;
+}
+
+div#cadastro_cidade_estado{
+	text-align: center;
+	border: solid;
+	border-radius: 10px;
+	margin: 50px;
+}
+
+#bt{
+	background-color:#1C1C1C;
+	color: #FFFFFF;
+	border: 0px;
+	width: 75px;
+	height: 25px;
+}
+
+table{
+	margin-right: auto;
+	margin-left: auto;
+}
+
+tr,td, label{
+	color: black;
+	font-family: Century Gothic, monospace;
+	text-align: left;
+}
+.footer {
+    clear: both;
+    border-top: 1px solid #606060;
+    color: #666;
+    text-align: center;
+    font-size: 80%;
+    bottom:0;
+    width:100%;
+}
