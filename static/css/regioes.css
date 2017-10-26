@@ -178,6 +178,9 @@ li.dropdown {
     width:100%;
 }
 
-#listacandidato{
-    list-style-type: disc;   
+.lista{
+    list-style-type: disc;
+}
+.lista a{
+    margin: 0px auto;
 }

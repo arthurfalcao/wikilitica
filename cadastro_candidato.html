@@ -4,18 +4,28 @@
 	<meta charset="utf-8">
 	<title>Cadastro do Candidato</title>
 	<meta charset="utf-8">
-	<link rel="stylesheet" type="text/css" href="static/css/cadastro_candidato.css">
+	<link rel="stylesheet" type="text/css" href="static/css/login.css">
 
 </head>
 <body>
-	<div id="cadastro_candidato">
+
+	<div class ="caixa" id="cadastro_candidato">
 		<a href="cadastro_candidato.html">
-			<img  id="img"  src="./static/img/logo c_politco.png" alt="logo" height="20px" width="80px">
+			<img  class="imagem" src="./static/img/logo c_politco.png" alt="logo">
 		</a>
-		<form><br>
-			<table>
-				<tr><td>Função:</td><td>
-					<select name="Tipo">
+		<form name="cadastro" action="">
+			<label id="l1">Nome</label><br>
+			<input type="text" name="Nome"><br>
+			<label id="l1">Sexo</label>
+					<select id="l1" name="Sexo">
+						<option value="selecione" selected="selected">Selecione</option>
+						<option value="masculino">Masculino</option>
+						<option value="feminino">Feminino</option>
+					</select><br><br>
+			<label id="l1">Profissão</label><br>
+			<input type="text" name="profissao"><br>
+			<label id="l1">Função</label>
+					<select id="l1" name="Tipo">
 						<option value="selecione" selected="selected">Selecione</option>
 						<option value="Vereador">Vereador</option>
 						<option value="Prefeito">Prefeito</option>
@@ -24,25 +34,22 @@
 						<option value="Governador">Governador</option>
 						<option value="Senador">Senador</option>
 						<option value="Presidente">Presidente</option>
-				 	</select></td></tr>
-				<tr><td>Nome:</td><td><input type="text" name="Nome"></td></tr>
-				<tr><td>Sexo:</td><td>
-					<select>
-						<option value="selecione" selected="selected">Selecione</option>
-						<option value="masculino">Masculino</option>
-						<option value="feminino">Feminino</option>
-					</select></td></tr>
-				<tr><td>Partido atual:</td><td>
-					<select name="Partidos">
+				 	</select><br><br>
+			<label id="l1">Estado do Político</label><br>
+			<input type="text" name="estado"><br>
+			<label id="l1">Partido atual</label>
+					<select id="l1" name="Partidos">
 						<option value="selecione" selected="selected">Selecione</option>
 						<option value="PT"">PT</option>
 						<option value="PSDB">PSDB</option>
 						<option value="REDE">REDE</option>
-				  </select></td></tr>
-				<tr><td>Profissão:</td><td><input type="text" name="profissao"></td></tr>
-			</table>
-			<br><input  id="bt" type="submit" value="Cadastrar"> <input id="bt" type="reset" value="Limpar"><br><br>
+				  </select><br><br>
+			<br>
+			<br>
+			<input type="submit" class="bt" value="Entrar">
+			<input type="reset" class="bt" value="Cancelar">
 		</form>
+		<br>
 	</div>
 </body>
 </html>

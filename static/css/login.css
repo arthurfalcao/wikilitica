@@ -4,6 +4,7 @@ body{
 	background-color: #eeeeee;
 	margin: 0 auto;
 	font-family: Century Gothic, monospace;
+	
 }
 
 
@@ -20,8 +21,8 @@ body{
 }
 
 .imagem{
-	width: 20%;
-	height: 130%;
+	width: 30%;
+	height: 140%;
 	padding: 40px;
 }
 form{
@@ -31,6 +32,7 @@ form{
 #l1{
 	color: black;
 	float:left;
+	padding: 5px;
 	
 }
 .bt{
@@ -41,6 +43,9 @@ form{
 	height: 25px;
 	padding: 4px;
 }
+select {
+	background-color: #f9f9f9; 
+}
 
 input{
 	background: none;
@@ -50,9 +55,11 @@ input{
     width: 100%;
     border-radius: 5px;
     padding: 4px;
+    margin-bottom: 10px;
 }
 
 /* Copyright */
+
 
 .footer {
     clear: both;
@@ -61,4 +68,5 @@ input{
     text-align: center;
     font-size: 80%;
     bottom:0;
+    width:100%;
 }
