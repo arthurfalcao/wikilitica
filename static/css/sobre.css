@@ -19,6 +19,7 @@ body{
     float: left;
 }
 
+
 nav {
 
     padding: 5px 0px 0px 0px;
@@ -35,7 +36,9 @@ nav a:hover{
     background-color: #2980b9;
     color: white;
 }
-
+#contatos {
+    list-style-image: url('../img/dev.png');
+}
 li a {
     display: block;
     color: white;

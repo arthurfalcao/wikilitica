@@ -43,10 +43,21 @@ form{
 	height: 25px;
 	padding: 4px;
 }
-select {
-	background-color: #f9f9f9; 
+.bt:hover{
+	background-color: #3498db;
 }
-
+select {
+	background-color: #f9f9f9;
+	border-radius: 8px;
+	outline: none;
+}
+select:focus{
+	border-color:#0073c0;
+	background-color:#ecf0f1;
+}
+select:hover{
+	background-color:#ecf0f1;
+}
 input{
 	background: none;
     box-shadow: 0 0 0 0;
@@ -56,6 +67,10 @@ input{
     border-radius: 5px;
     padding: 4px;
     margin-bottom: 10px;
+}
+
+input:focus{
+	background-color:#ecf0f1;
 }
 
 /* Copyright */
