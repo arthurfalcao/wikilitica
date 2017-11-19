@@ -13,7 +13,7 @@ $endereco = $_POST['nEnd'];
 $estado = $_POST['nEst'];
 $cidade = $_POST['nCid'];
 
-$SQL = "INSERT INTO T_USUARIO (id, email, senha, cpf, nome, telefone, data_nasc, sexo, endereco, estado, cidade)
+$SQL = "INSERT INTO T_USUARIO (id, email, senha, cpf, n ome, telefone, data_nasc, sexo, endereco, estado, cidade)
         VALUES (DEFAULT, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)";
 $stmt = $conn->prepare($SQL);
 $stmt->bindParam(1, $email);
