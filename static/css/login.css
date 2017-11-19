@@ -4,9 +4,8 @@ body{
 	background-color: #eeeeee;
 	margin: 0 auto;
 	font-family: Century Gothic, monospace;
-	
-}
 
+}
 
 .caixa{
 	text-align: center;
@@ -33,7 +32,7 @@ form{
 	color: black;
 	float:left;
 	padding: 5px;
-	
+
 }
 .bt{
 	background-color:#2980b9;

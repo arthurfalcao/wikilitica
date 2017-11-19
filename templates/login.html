@@ -10,14 +10,14 @@
 		<a href="./login.html">
 			<img  class="imagem"  src="../static/img/login.png" alt="logo" height="20px" width="80px">
 		</a>
-		<form name="login" action="">
-			<label id="l1">Usuário:</label><br>
-			<input type="text" name="usuario" id="f1"><br><br>
+		<form name="login" action="login.php" method="post">
+			<label id="l1">Email:</label><br>
+			<input type="text" name="nEmail" id="iEmail"><br><br>
 			<label id="l1">Senha:</label><br>
-			<input type="password" name="senha"><br><br>
+			<input type="password" name="nSenha" id="iSenha"><br><br>
 			<label><input style="width: 10px;" type="radio" value="Lembrar Senha"> Lembrar Senha</label>
 			<br><br>
-			<input type="submit" class="bt" value="Entrar">
+			<button class="bt" type="submit" name="button">Entrar</button>
 		</form>
 		<br>
 	</div>
