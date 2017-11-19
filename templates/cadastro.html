@@ -10,35 +10,34 @@
 		<a href="../index.html">
 			<img  class="imagem"  src="../static/img/registro.png" alt="logo">
 		</a>
-		<form name="cadastro" action="">
-			<label id="l1">Email</label>
-			<input type="text" name="email"><br>
-			<label id="l1">Senha</label>
-			<input type="password" name="senha"><br>
-			<label id="l1">CPF</label>
-			<input type="text" name="cpf"><br>
-			<label id="l1">Nome Completo</label>
-			<input type="text" name="nome"><br>
-			<label id="l1">Telefone</label>
-			<input type="text" name="Telefone"><br>
+		<form name="cadastro" action="cadastro.php" method="post">
+			<input type="hidden" name="id">
+			<label id="l1" for="iEmail">Email</label>
+			<input type="email" name="nEmail" id="iEmail"><br>
+			<label id="l1" for="iSenha">Senha</label>
+			<input type="password" name="nSenha" id="iSenha"><br>
+			<label id="l1" for="iCPF">CPF</label>
+			<input type="text" name="nCPF" id="iCPF"><br>
+			<label id="l1" for="iNome">Nome Completo</label>
+			<input type="text" name="nNome" id="iNome"><br>
+			<label id="l1" for="iTelefone">Telefone</label>
+			<input type="text" name="nTelefone" id="iTelefone"><br>
 			<label id="l1">Data de Nascimento</label>
-			<input style="width: 40%"type="date" name="datanascimento"><br>
+			<input style="width: 40%" type="date" name="nData" id="iData"><br>
 			<label id="l1">Sexo</label>
-			<select id="l1" name="Sexo">
+			<select id="l1" name="nSexo" id="iSexo">
 						<option selected="selected">Selecione</option>
 						<option value="masculino">Masculino</option>
 						<option value="feminino">Feminino</option>
 			</select><br><br>
-			<label id="l1">Endereço</label>
-			<input type="text" name="Endereço"><br>
-			<label id="l1">Cidade</label><br>
-			<input type="text" name="cidade"><br>
-			<label id="l1">Estado</label><br>
-			<input type="text" name="estado"><br>
+			<label id="l1" for="iEnd">Endereço</label>
+			<input type="text" name="nEnd" id="iEnd"><br>
+			<label id="l1" for="iEst">Estado</label><br>
+			<input type="text" name="nEst" id="iEst"><br>
+			<label id="l1" for="iCid">Cidade</label><br>
+			<input type="text" name="nCid" id="iCid"><br>
 			<br>
-			<br>
-			<input type="submit" class="bt" value="Cadastrar">
-			<input type="reset" class="bt" value="Cancelar">
+			<button class="bt" type="submit" name="button">Cadastrar</button>
 		</form>
 		<br>
 	</div>
