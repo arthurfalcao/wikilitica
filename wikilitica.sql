@@ -75,18 +75,3 @@ COMMIT;
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
 /*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
-
---
--- Estrutura da tabela `t_politico`
---
-
-CREATE TABLE `t_politico` (
-  `id` int(11) NOT NULL,
-  `nome` varchar(100) NOT NULL,
-  `data_nasc` date NOT NULL,
-  `sexo` varchar(10) NOT NULL,
-  `profissao` varchar(150) NOT NULL,
-  `funcao` varchar(50) NOT NULL,
-  `cidade` varchar(50) NOT NULL,
-  `p_atual` varchar(50) NOT NULL,
-) ENGINE=MyISAM DEFAULT CHARSET=utf8;
