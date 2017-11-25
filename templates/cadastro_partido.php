@@ -18,8 +18,6 @@ $stmt->bindParam(1, $nome);
 $stmt->bindParam(2, $sigla);
 $stmt->bindParam(3, $espectro);
 
-
-
 try {
   $stmt->execute();
   echo "<script>alert('Partido cadastrado com sucesso');</script>";

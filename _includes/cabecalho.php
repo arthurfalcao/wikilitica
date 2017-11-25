@@ -16,7 +16,7 @@
           <div class="dropdown-content">
              <a href="./templates/candidato.php">Candidatos</a>
              <a href="./templates/partido.php">Partidos</a>
-             <a href="./templates/cadastro_cidade_estado.php">Cidade/Estado</a>
+             <a href="./templates/estado.php">Cidade/Estado</a>
           </div>
         </li>
         <li><a href="./templates/sobre.php">Sobre</a></li>

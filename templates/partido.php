@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<title>cadastro_partido</title>
+	<title>Cadastro de Partidos</title>
 	<meta charset="utf-8">
 	<link rel="stylesheet" type="text/css" href="../static/css/login.css">
 	<link rel="stylesheet" type="text/css" href="../static/css/estilo.css">
