@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: 25-Nov-2017 às 20:40
+-- Generation Time: 25-Nov-2017 às 23:05
 -- Versão do servidor: 10.1.28-MariaDB
 -- PHP Version: 7.1.11
 
@@ -33,6 +33,39 @@ CREATE TABLE `estado` (
   `NOME` varchar(30) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
+--
+-- Extraindo dados da tabela `estado`
+--
+
+INSERT INTO `estado` (`ID_ESTADO`, `NOME`) VALUES
+(1, 'ACRE'),
+(2, 'ALAGOAS'),
+(3, 'AMAPA'),
+(4, 'AMAZONAS'),
+(5, 'BAHIA'),
+(6, 'CEARÁ'),
+(7, 'DISTRITO FEDERAL'),
+(8, 'ESPÍRITO SANTO'),
+(9, 'GOIÁS'),
+(10, 'MARANHÃO'),
+(11, 'MATO GROSSO'),
+(12, 'MATO GROSSO DO SUL'),
+(13, 'MINAS GERAIS'),
+(14, 'PARÁ'),
+(15, 'PARAÍBA'),
+(16, 'PARANÁ'),
+(17, 'PERNAMBUCO'),
+(18, 'PIAUÍ'),
+(19, 'RIO DE JANEIRO'),
+(20, 'RIO GRANDE DO NORTE'),
+(21, 'RIO GRANDE DO SUL'),
+(22, 'RÔNDONIA'),
+(23, 'RORAIMA'),
+(24, 'SANTA CATARINA'),
+(25, 'SÃO PAULO'),
+(26, 'SERGIPE'),
+(27, 'TOCANTINS');
+
 -- --------------------------------------------------------
 
 --
@@ -44,6 +77,14 @@ CREATE TABLE `municipio` (
   `NOME` varchar(30) CHARACTER SET utf8mb4 NOT NULL,
   `ESTADO` int(11) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+--
+-- Extraindo dados da tabela `municipio`
+--
+
+INSERT INTO `municipio` (`ID_MUNICIPIO`, `NOME`, `ESTADO`) VALUES
+(1, 'MACEIÓ', 2),
+(2, 'ARAPIRACA', 2);
 
 -- --------------------------------------------------------
 
@@ -139,13 +180,13 @@ ALTER TABLE `usuario`
 -- AUTO_INCREMENT for table `estado`
 --
 ALTER TABLE `estado`
-  MODIFY `ID_ESTADO` int(11) NOT NULL AUTO_INCREMENT;
+  MODIFY `ID_ESTADO` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=29;
 
 --
 -- AUTO_INCREMENT for table `municipio`
 --
 ALTER TABLE `municipio`
-  MODIFY `ID_MUNICIPIO` int(11) NOT NULL AUTO_INCREMENT;
+  MODIFY `ID_MUNICIPIO` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
 
 --
 -- AUTO_INCREMENT for table `partido`
