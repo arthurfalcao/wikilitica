@@ -27,6 +27,7 @@
 					<option selected="selected">Selecione</option>
 					<option value="direita">Direita</option>
 					<option value="esquerda">Esquerda</option>
+					<option value="neutro">Neutro</option>
 			</select><br><br>
 			<br>
 			<br>
