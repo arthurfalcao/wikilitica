@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: 25-Nov-2017 às 23:05
+-- Generation Time: 26-Nov-2017 às 00:40
 -- Versão do servidor: 10.1.28-MariaDB
 -- PHP Version: 7.1.11
 
@@ -99,6 +99,13 @@ CREATE TABLE `partido` (
   `SIGLA` varchar(10) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
+--
+-- Extraindo dados da tabela `partido`
+--
+
+INSERT INTO `partido` (`ID_PARTIDO`, `ESPECTRO`, `NOME`, `SIGLA`) VALUES
+(1, 'direita', 'FLOW', 'FLOW');
+
 -- --------------------------------------------------------
 
 --
@@ -108,13 +115,20 @@ CREATE TABLE `partido` (
 CREATE TABLE `politico` (
   `ID_POLITICO` int(11) NOT NULL,
   `NOME` varchar(30) NOT NULL,
-  `IDADE` int(11) NOT NULL,
+  `DATA_NASC` date NOT NULL,
   `SEXO` varchar(10) NOT NULL,
   `PROFISSAO` varchar(30) NOT NULL,
   `FUNCAO` varchar(30) NOT NULL,
   `ESTADO` int(11) NOT NULL,
   `PARTIDO` int(11) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+--
+-- Extraindo dados da tabela `politico`
+--
+
+INSERT INTO `politico` (`ID_POLITICO`, `NOME`, `DATA_NASC`, `SEXO`, `PROFISSAO`, `FUNCAO`, `ESTADO`, `PARTIDO`) VALUES
+(1, 'Arthur JosÃ© Vasconcelos FalcÃ', '1998-11-17', 'masculino', 'Desenvolvedor Full-Stack', 'Presidente', 2, 1);
 
 -- --------------------------------------------------------
 
@@ -192,13 +206,13 @@ ALTER TABLE `municipio`
 -- AUTO_INCREMENT for table `partido`
 --
 ALTER TABLE `partido`
-  MODIFY `ID_PARTIDO` int(11) NOT NULL AUTO_INCREMENT;
+  MODIFY `ID_PARTIDO` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
 
 --
 -- AUTO_INCREMENT for table `politico`
 --
 ALTER TABLE `politico`
-  MODIFY `ID_POLITICO` int(11) NOT NULL AUTO_INCREMENT;
+  MODIFY `ID_POLITICO` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
 
 --
 -- AUTO_INCREMENT for table `usuario`
