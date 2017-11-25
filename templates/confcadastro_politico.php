@@ -10,7 +10,7 @@ $funcao = $_POST['nFuncao'];
 $cidade = $_POST['nCid'];
 $partido = $_POST['nPartido'];
 
-$SQL = "INSERT INTO T_POLITICO (id, nome, data_nasc, sexo, profissao, funcao, cidade, partido)
+$SQL = "INSERT INTO politico (id_politico, nome, idade, sexo, profissao, funcao, cidade, partido)
         VALUES (DEFAULT, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)";
 $stmt = $conn->prepare($SQL);
 $stmt->bindParam(1, $nome);

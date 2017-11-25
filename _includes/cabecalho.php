@@ -14,8 +14,8 @@
         <li><a href="./templates/index_regioes.php">Estados e Munícipios</a></li>
         <li class="dropdown"><a href="#" class="dropbtn">Contribuir</a>
           <div class="dropdown-content">
-             <a href="./templates/cadastro_candidato.php">Candidatos</a>
-             <a href="./templates/cadastro_partido.php">Partidos</a>
+             <a href="./templates/candidato.php">Candidatos</a>
+             <a href="./templates/partido.php">Partidos</a>
              <a href="./templates/cadastro_cidade_estado.php">Cidade/Estado</a>
           </div>
         </li>

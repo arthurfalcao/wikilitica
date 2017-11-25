@@ -10,7 +10,7 @@
 	<?php include "cabecalho.php" ?>
 	<div class="corpo">
 		<div class="corpo" id="cabecalho">
-			<img  class="img" src="./static/img/logo_politicos.png" align="center" alt="logo_politicos">
+			<h1>Candidatos</h1>
 		</div>
 		<div class="corpo" id="conteudo">
 			<h2>Aqui vai ficar a lista de candidatos com seus dados</h2>
