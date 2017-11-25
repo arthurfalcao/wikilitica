@@ -10,7 +10,8 @@
 	<?php include "cabecalho.php" ?>
 	<div class="corpo">
 		<div class="corpo" id="cabecalho">
-			<h1>Partidos</h1>
+			<img  class="img" src="./static/img/logo_partidos.png" align="center" alt="logo_partidos">
+		</div>
 		</div>
 		<div class="corpo" id="conteudo">
 			<h2>Aqui vai ficar a lista de partidos com seus dados, como: locais presentes, representantes e etc.</h2>
