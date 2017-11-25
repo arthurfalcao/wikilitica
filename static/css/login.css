@@ -19,8 +19,8 @@ body{
     z-index: 1;
 }
 
-.imagem{
-	width: 30%;
+.imagemCaixa{
+	width: 60%;
 	height: 140%;
 	padding: 40px;
 }

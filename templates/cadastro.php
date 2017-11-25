@@ -10,7 +10,7 @@
 	<?php include "cabecalho.php" ?>
 	<div class ="caixa" id="cadastro">
 		<a href="../index.html">
-			<img  class="imagem"  src="../static/img/registro.png" alt="logo">
+			<img  class="imagemCaixa"  src="../static/img/registro.png" alt="logo">
 		</a>
 		<form name="cadastro" action="confcadastro.php" method="post">
 			<label class="l1" for="iEmail">Email</label>

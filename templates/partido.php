@@ -10,7 +10,7 @@
 	<?php include "cabecalho.php" ?>
 	<section>
 		<div class ="caixa" id="cadastro_partido">
-			<a><img  class="imagem"  src="../static/img/logo c_partido.png" alt="logo" height="20px" width="80px"></a>
+			<a><img  class="imagemCaixa"  src="../static/img/logo c_partido.png" alt="logo" height="20px" width="80px"></a>
 			<form name="cadastro" action="cadastro_partido.php" method="post">
 				<input type="hidden" name="id_partido">
 				<label for="nome" class="l1">Nome do Partido</label>

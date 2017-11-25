@@ -27,7 +27,7 @@ $stmt_est->execute();
 	<?php include "cabecalho.php" ?>
 	<div class ="caixa" id="cadastro_candidato">
 		<a href="./cadastro_candidato.html">
-			<img  class="imagem" src="../static/img/logo c_politco.png" alt="logo">
+			<img  class="imagemCaixa" src="../static/img/logo c_politco.png" alt="logo">
 		</a>
 		<form name="cadastro" action="cadastro_candidato.php" method="post">
 			<label for="nome" class="l1">Nome</label><br>

@@ -10,7 +10,7 @@
   <?php include "cabecalho.php" ?>
 	<div class ="caixa" id="login">
 		<a href="./login.html">
-			<img  class="imagem"  src="../static/img/login.png" alt="logo" height="20px" width="80px">
+			<img  class="imagemCaixa"  src="../static/img/login.png" alt="logo" height="20px" width="80px">
 		</a>
 		<form name="login" action="confirma_login.php" method="post">
 			<label id="l1">Email:</label><br>
