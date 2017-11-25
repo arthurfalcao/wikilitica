@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: 22-Nov-2017 às 04:30
+-- Generation Time: 25-Nov-2017 às 20:40
 -- Versão do servidor: 10.1.28-MariaDB
 -- PHP Version: 7.1.11
 
@@ -30,7 +30,19 @@ SET time_zone = "+00:00";
 
 CREATE TABLE `estado` (
   `ID_ESTADO` int(11) NOT NULL,
-  `MUNICIPIO` varchar(50) NOT NULL
+  `NOME` varchar(30) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+-- --------------------------------------------------------
+
+--
+-- Estrutura da tabela `municipio`
+--
+
+CREATE TABLE `municipio` (
+  `ID_MUNICIPIO` int(11) NOT NULL,
+  `NOME` varchar(30) CHARACTER SET utf8mb4 NOT NULL,
+  `ESTADO` int(11) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 -- --------------------------------------------------------
@@ -58,7 +70,9 @@ CREATE TABLE `politico` (
   `IDADE` int(11) NOT NULL,
   `SEXO` varchar(10) NOT NULL,
   `PROFISSAO` varchar(30) NOT NULL,
-  `FUNCAO` varchar(30) NOT NULL
+  `FUNCAO` varchar(30) NOT NULL,
+  `ESTADO` int(11) NOT NULL,
+  `PARTIDO` int(11) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 -- --------------------------------------------------------
@@ -91,6 +105,13 @@ ALTER TABLE `estado`
   ADD PRIMARY KEY (`ID_ESTADO`);
 
 --
+-- Indexes for table `municipio`
+--
+ALTER TABLE `municipio`
+  ADD PRIMARY KEY (`ID_MUNICIPIO`),
+  ADD KEY `FK_MUNICIO_ESTADO` (`ESTADO`);
+
+--
 -- Indexes for table `partido`
 --
 ALTER TABLE `partido`
@@ -100,7 +121,9 @@ ALTER TABLE `partido`
 -- Indexes for table `politico`
 --
 ALTER TABLE `politico`
-  ADD PRIMARY KEY (`ID_POLITICO`);
+  ADD PRIMARY KEY (`ID_POLITICO`),
+  ADD KEY `FK_POLITICO_ESTADO` (`ESTADO`),
+  ADD KEY `FK_POLITICO_PARTIDO` (`PARTIDO`);
 
 --
 -- Indexes for table `usuario`
@@ -118,11 +141,12 @@ ALTER TABLE `usuario`
 ALTER TABLE `estado`
   MODIFY `ID_ESTADO` int(11) NOT NULL AUTO_INCREMENT;
 
-<<<<<<< HEAD
-/*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
-/*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
-/*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
-=======
+--
+-- AUTO_INCREMENT for table `municipio`
+--
+ALTER TABLE `municipio`
+  MODIFY `ID_MUNICIPIO` int(11) NOT NULL AUTO_INCREMENT;
+
 --
 -- AUTO_INCREMENT for table `partido`
 --
@@ -146,14 +170,19 @@ ALTER TABLE `usuario`
 --
 
 --
+-- Limitadores para a tabela `municipio`
+--
+ALTER TABLE `municipio`
+  ADD CONSTRAINT `FK_MUNICIO_ESTADO` FOREIGN KEY (`ESTADO`) REFERENCES `estado` (`ID_ESTADO`);
+
+--
 -- Limitadores para a tabela `politico`
 --
 ALTER TABLE `politico`
-  ADD CONSTRAINT `FK_POLITICO_ESTADO` FOREIGN KEY (`ID_POLITICO`) REFERENCES `estado` (`ID_ESTADO`),
-  ADD CONSTRAINT `FK_POLITICO_PARTIDO` FOREIGN KEY (`ID_POLITICO`) REFERENCES `partido` (`ID_PARTIDO`);
+  ADD CONSTRAINT `FK_POLITICO_ESTADO` FOREIGN KEY (`ESTADO`) REFERENCES `estado` (`ID_ESTADO`),
+  ADD CONSTRAINT `FK_POLITICO_PARTIDO` FOREIGN KEY (`PARTIDO`) REFERENCES `partido` (`ID_PARTIDO`);
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
 /*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
->>>>>>> 8e28b8822aaf593ca267e7f47adc25695e94e8c7
