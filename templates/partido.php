@@ -13,7 +13,7 @@
 			<a><img  class="imagem"  src="../static/img/logo c_partido.png" alt="logo" height="20px" width="80px"></a>
 			<form name="cadastro" action="cadastro_partido.php" method="post">
 				<input type="hidden" name="id_partido">
-				<label for="nome" class="l1">Nome</label>
+				<label for="nome" class="l1">Nome do Partido</label>
 				<input required type="text" name="nome" id="nome">
 				<label for="sigla" class="l1">Sígla</label>
 				<input required type="text" name="sigla" id="sigla">
