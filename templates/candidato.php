@@ -15,45 +15,36 @@
 		</a>
 		<form name="cadastro" action="cadasto_politico.php" method="post">
 			<label class="l1">Nome</label><br>
-			<input type="text" name="nNome"><br>
+			<input type="text" name="nome"><br>
 			<label class="l1">Sexo</label>
-					<select class="l1" name="nSexo">
+					<select class="l1" name="sexo">
 						<option value="selecione" selected="selected">Selecione</option>
 						<option value="masculino">Masculino</option>
 						<option value="feminino">Feminino</option>
 					</select><br><br>
 			<label class="l1">Profissão</label><br>
-			<input type="text" name="nProfissao"><br>
+			<input type="text" name="profissao"><br>
 			<label class="l1">Função</label>
-					<select class="l1" name="nFuncao">
+					<select class="l1" name="funcao">
 						<option value="selecione" selected="selected">Selecione</option>
-						<option value="Vereador">Vereador</option>
-						<option value="Prefeito">Prefeito</option>
-						<option value="D.Estadual">D.Estadual</option>
-						<option value="D.Federal">D.Federal</option>
-						<option value="Governador">Governador</option>
-						<option value="Senador">Senador</option>
-						<option value="Presidente">Presidente</option>
+						
 				 	</select><br><br>
 			<!--Deverá ter condição para definir os dados que serão exibidos Cidade ou Estado dependendo da Função-->
 			<label class="l1">Cidade ou Estado de Atuação</label><br>
-			<input type="text" name="nCid"><br>
+			<input type="text" name="cidade" id="cidade"><br>
 			<label class="l1">Partido atual</label>
-					<select class="l1" name="nPartido">
+					<select class="l1" name="partido">
 						<option value="selecione" selected="selected">Selecione</option>
-						<option value="PT"">PT</option>
+						<option value="PT">PT</option>
 						<option value="PSDB">PSDB</option>
 						<option value="REDE">REDE</option>
 				  </select><br><br>
 			<br>
-			<br action="..\index.html">
-			<input type="submit" class="bt" value="Cadastrar">
-			<input type="reset" class="bt" value="Cancelar">
+			<br>
+			<button type="submit" name="button" class="bt">Cadastrar</button>
 		</form>
 		<br>
 	</div>
-	<footer class="footer" id="rodape">
-		<p> Copyright &copy 2017 FlowTeam</p>
-	</footer>
+	<?php include "rodape.php" ?>
 </body>
 </html>

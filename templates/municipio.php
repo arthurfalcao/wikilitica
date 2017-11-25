@@ -21,15 +21,15 @@
 		<a href="./estado.html">
 			<img  class="imagem" src="../static/img/logo_c_cidade-estado.png" alt="logo">
 		</a>
-		<form name="cadastro_estado" action="cadastro_estado.php" method="post">
-			<input type="hidden" name="id_estado">
-      <label>Estado</label>
-      <select class="" name="">
+		<form action="cadastro_municipio.php" method="post">
+			<input type="hidden" name="id_estado"><br>
+      <label class="l1">Estado</label>
+      <select required class="l1" name="estado">
         <option>Selecione</option>
         <?php while($est = $stmt->fetch(PDO::FETCH_ASSOC)) { ?>
           <option value="<?php echo $est['ID_ESTADO'] ?>"><?php echo $est['NOME'] ?></option>
         <?php } ?>
-      </select>
+      </select><br><br>
 			<label for="municipio" class="l1">Municipio</label>
 			<input required type="text" name="municipio" id="municipio">
 			<button type="submit" class="bt" name="button">Cadastrar</button>
