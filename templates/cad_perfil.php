@@ -1,10 +1,10 @@
 <?php
 require_once 'config.php';
 
-$nomeCandidato = $_POST['nome_candidato'];
-$idEstado = $_POST['estado'];
+$idPolitico = $_POST['btn-can'];
 
 $SQL_PTD = "SELECT
+POLITICO.ID_POLITICO,
 POLITICO.NOME AS NOME,
 POLITICO.DATA_NASC,
 POLITICO.SEXO,
@@ -20,12 +20,12 @@ ON PARTIDO.ID_PARTIDO = POLITICO.PARTIDO
 INNER JOIN ESTADO
 ON ESTADO.ID_ESTADO = POLITICO.ESTADO
 
-WHERE POLITICO.NOME LIKE ? AND POLITICO.ESTADO = ?
+WHERE POLITICO.ID_POLITICO = ?
 ";
 
 $stmt = $conn->prepare($SQL_PTD);
-$params = array("%$nomeCandidato%", $idEstado);
-$stmt->execute($params);
+$stmt->bindParam(1, $idPolitico);
+$stmt->execute();
 $canditados = $stmt->fetch(PDO::FETCH_ASSOC);
 
  ?>
