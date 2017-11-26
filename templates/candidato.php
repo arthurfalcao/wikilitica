@@ -29,7 +29,7 @@ $stmt_est->execute();
 		<a href="./cadastro_candidato.html">
 			<img  class="imagemCaixa" src="../static/img/logo c_politco.png" alt="logo">
 		</a>
-		<form name="cadastro" action="cadastro_candidato.php" method="post">
+		<form id = "cadastroEstilo" name="cadastro" action="cadastro_candidato.php" method="post">
 			<label for="nome" class="l1">Nome</label><br>
 			<input required type="text" name="nome" id="nome"><br>
 			<label for="sexo" class="l1">Sexo</label>

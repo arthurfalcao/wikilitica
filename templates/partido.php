@@ -9,7 +9,7 @@
 <body>
 	<?php include "cabecalho.php" ?>
 	<section>
-		<div class ="caixa" id="cadastro_partido">
+		<div id = "cadastroEstilo" class ="caixa" id="cadastro_partido">
 			<a><img  class="imagemCaixa"  src="../static/img/logo c_partido.png" alt="logo" height="20px" width="80px"></a>
 			<form name="cadastro" action="cadastro_partido.php" method="post">
 				<input type="hidden" name="id_partido">
