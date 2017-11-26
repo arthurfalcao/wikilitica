@@ -15,7 +15,7 @@
             <a href="candidato.php">Candidatos</a>
              <a href="partido.php">Partidos</a>
              <a href="estado.php">Estado</a>
-             <a href="estado.php">Município</a> 
+             <a href="municipio.php">Município</a> 
           </div>
         </li>
         <li><a href="sobre.php">Sobre</a></li>
