@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: 26-Nov-2017 às 00:40
+-- Generation Time: 26-Nov-2017 às 03:17
 -- Versão do servidor: 10.1.28-MariaDB
 -- PHP Version: 7.1.11
 
@@ -139,11 +139,11 @@ INSERT INTO `politico` (`ID_POLITICO`, `NOME`, `DATA_NASC`, `SEXO`, `PROFISSAO`,
 CREATE TABLE `usuario` (
   `CPF` int(11) NOT NULL,
   `EMAIL` varchar(30) NOT NULL,
-  `PASSWORD` varchar(30) NOT NULL,
-  `NOME_COMPLETO` varchar(80) NOT NULL,
+  `SENHA` varchar(30) NOT NULL,
+  `NOME` varchar(80) NOT NULL,
   `TELEFONE` int(15) NOT NULL,
-  `ENDEREÇO` varchar(100) NOT NULL,
-  `DATA_NASCIMENTO` date NOT NULL,
+  `ENDERECO` varchar(100) NOT NULL,
+  `DATA_NASC` date NOT NULL,
   `ESTADO` varchar(20) NOT NULL,
   `CIDADE` varchar(20) NOT NULL,
   `SEXO` varchar(10) NOT NULL
