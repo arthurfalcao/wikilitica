@@ -26,16 +26,15 @@
 			</ul>
 			<h2>Mapa do Site:</h2>
 			<ul type="square">
-				<li><a href="../index.html" class="link1"> Inicio</a></li>
-				<li><a href="./index_politicos.html" class="link1"> Candidatos</a>
-				<li><a href="./index_partidos.html" class="link1"> Partidos</a></li>
-				<li><a href="./index_regioes.html" class="link1"> Estados e Municípios</a> </li><br><br>
+				<li><a href="../index.php" class="link1"> Inicio</a></li>
+				<li><a href="./mostrar_lista.php" class="link1"> Buscar</a>
 				<li>Contribuir
 					<ul type="circle">
-						<li><a href="./cadastro_candidato.html" class="link1"> Candidatos</a></li>
-						<li><a href="./cadastro_partido.html" class="link1"> Partidos</a></li>
-						<li><a href="./cadastro_partido.html" class="link1"> Estados e Municípios</a></li>
-					</ul>
+						<li><a href="candidato.php" class="link1"> Candidatos</a></li>
+						<li><a href="partido.php" class="link1"> Partidos</a></li>
+						<li><a href="estado.php" class="link1"> Estados </a></li>
+						<li><a href="municipio.php" class="link1"> Municípios</a></li>
+					</ul>s
 				</li>
 				<li><a href="./sobre.html " class="link1"> Sobre</a> </li><br><br>
 			</ul>
