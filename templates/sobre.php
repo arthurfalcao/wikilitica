@@ -11,7 +11,7 @@
 
 		<div class="corpo" id="conteudo">
 			<div class="corpo" id="cabecalho">
-			<h1>Sobre</h1>
+			<img    src="../static/img/logo_sobre.png" alt="logo" height="80px" width="270px">
 		</div>
 			<p>
 				Área destinada ao LEIA-ME
