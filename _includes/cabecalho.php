@@ -9,14 +9,13 @@
     </a>
     <div class = "menuhorizontal" id = "menuhorizontal">
       <ul>
-        <li><a href="./templates/index_politicos.php">Candidatos</a></li>
-        <li><a href="./templates/index_partidos.php">Partidos</a></li>
-        <li><a href="./templates/index_regioes.php">Estados e Munícipios</a></li>
+        <li><a href="./templates/mostrar_lista.php">Buscar</a></li>
         <li class="dropdown"><a href="#" class="dropbtn">Contribuir</a>
           <div class="dropdown-content">
              <a href="./templates/candidato.php">Candidatos</a>
              <a href="./templates/partido.php">Partidos</a>
-             <a href="./templates/estado.php">Cidade/Estado</a>
+             <a href="./templates/estado.php">Estado</a>
+             <a href="./templates/estado.php">Município</a> 
           </div>
         </li>
         <li><a href="./templates/sobre.php">Sobre</a></li>
