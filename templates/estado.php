@@ -20,7 +20,7 @@ if (!isLogado()) {
 	<?php include "cabecalho.php" ?>
 	<div class ="caixa" id="cadastro_candidato">
 		<a href="./estado.php">
-			<img  class="imagemCaixa" src="../static/img/logo_c_cidade-estado.png" alt="logo">
+			<img  class="imagemCaixa" src="../static/img/logo_estado.png" alt="logo">
 		</a>
 		<form class = "cadastroEstilo" name="cadastro_estado" action="cadastro_estado.php" method="post">
 			<input type="hidden" name="id_estado">

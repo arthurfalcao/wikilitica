@@ -24,7 +24,7 @@
 	<?php include "cabecalho.php" ?>
 	<div class ="caixa" id="cadastro_candidato">
 		<a href="./municipio.php">
-			<img  class="imagemCaixa" src="../static/img/logo_c_cidade-estado.png" alt="logo">
+			<img  class="imagemCaixa" src="../static/img/logo_cidade.png" alt="logo">
 		</a>
 		<form class = "cadastroEstilo" action="cadastro_municipio.php" method="post">
 			<input type="hidden" name="id_estado"><br>

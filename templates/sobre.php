@@ -39,7 +39,7 @@ session_start();
 						<li><a href="partido.php" class="link1"> Partidos</a></li>
 						<li><a href="estado.php" class="link1"> Estados </a></li>
 						<li><a href="municipio.php" class="link1"> Municípios</a></li>
-					</ul>s
+					</ul>
 				</li>
 				<li><a href="./sobre.html " class="link1"> Sobre</a> </li><br><br>
 			</ul>
