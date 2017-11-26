@@ -21,7 +21,7 @@
 		<a href="./estado.html">
 		<img  class="imagemCaixa" src="../static/img/buscar.png" alt="logo">
 		</a>
-			<form class="cadastroEstilo" >
+			<form class="cadastroEstilo" method="post" action="cad_perfil.php">
 				<label for="nome_candidato" class="l1">Nome do Candidato</label>
 				<input id ="nome_candidato" type="text" name="nome_candidato"><br>
 				<label class="l1">Estado de Atuação</label>

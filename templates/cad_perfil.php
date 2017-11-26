@@ -1,3 +1,35 @@
+<?php
+require_once 'config.php';
+
+$nomeCandidato = $_POST['nome_candidato'];
+$idEstado = $_POST['estado'];
+
+$SQL_PTD = "SELECT
+POLITICO.NOME AS NOME,
+POLITICO.DATA_NASC,
+POLITICO.SEXO,
+POLITICO.PROFISSAO,
+POLITICO.FUNCAO,
+PARTIDO.NOME AS PARTIDO,
+ESTADO.NOME AS ESTADO
+
+FROM POLITICO
+
+INNER JOIN PARTIDO
+ON PARTIDO.ID_PARTIDO = POLITICO.PARTIDO
+INNER JOIN ESTADO
+ON ESTADO.ID_ESTADO = POLITICO.ESTADO
+
+WHERE POLITICO.NOME LIKE ? AND POLITICO.ESTADO = ?
+";
+
+$stmt = $conn->prepare($SQL_PTD);
+$params = array("%$nomeCandidato%", $idEstado);
+$stmt->execute($params);
+$canditados = $stmt->fetch(PDO::FETCH_ASSOC);
+
+ ?>
+
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
@@ -12,12 +44,14 @@
 			<img    src="../static/img/logo_candidato.png" alt="logo" height="80px" width="270px">
 		</div>
 	<div class="corpo" id="conteudo">
-	<label>Nome:</label>
-	<label>Idade:</label>
-	<label>Sexo:</label>
-	<label>Profissão:</label>
-	<label>Função</label>					
-			
+	<label>Nome: <?php echo $canditados['NOME'] ?></label><br>
+	<label>Idade: <?php echo $canditados['DATA_NASC'] ?></label><br>
+	<label>Sexo: <?php echo $canditados['SEXO'] ?></label><br>
+	<label>Profissão: <?php echo $canditados['PROFISSAO'] ?></label><br>
+	<label>Função: <?php echo $canditados['FUNCAO'] ?></label><br>
+	<label>Partido: <?php echo $canditados['PARTIDO'] ?></label><br>
+	<label>Estado: <?php echo $canditados['ESTADO'] ?></label><br>
+
 	<?php include "rodape.php" ?>
 </body>
 </html>
