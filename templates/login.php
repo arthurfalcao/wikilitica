@@ -12,7 +12,7 @@
 		<a href="./login.html">
 			<img  class="imagemCaixa"  src="../static/img/login.png" alt="logo" height="20px" width="80px">
 		</a>
-		<form name="login" action="confirma_login.php" method="post">
+		<form class = "cadastroEstilo" name="login" action="confirma_login.php" method="post">
 			<label id="l1">Email:</label><br>
 			<input type="text" name="nEmail" id="iEmail"><br><br>
 			<label id="l1">Senha:</label><br>

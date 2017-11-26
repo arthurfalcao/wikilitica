@@ -12,7 +12,7 @@
 		<a href="../index.html">
 			<img  class="imagemCaixa"  src="../static/img/registro.png" alt="logo">
 		</a>
-		<form name="cadastro" action="confcadastro.php" method="post">
+		<form class = "cadastroEstilo" name="cadastro" action="confcadastro.php" method="post">
 			<label class="l1" for="iEmail">Email</label>
 			<input required type="email" name="nEmail" id="iEmail"><br>
 			<label class="l1" for="iSenha">Senha</label>
