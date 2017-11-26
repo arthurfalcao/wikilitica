@@ -42,7 +42,7 @@
 						<option>Senador</option>
 						<option>Presidente</option>
 				 	</select><br><br>
-				 <button type="submit" class="bt" name="button">Cadastrar</button>
+				 <button type="submit" class="bt" name="button">Buscar</button>
 			</form>
 			<br>
 	</div>
