@@ -19,9 +19,9 @@
 	<?php include "cabecalho.php" ?>
 	<div class ="caixa" id="cadastro_candidato">
 		<a href="./estado.html">
-			<img  class="imagem" src="../static/img/logo_c_cidade-estado.png" alt="logo">
+			<img  class="imagemCaixa" src="../static/img/logo_c_cidade-estado.png" alt="logo">
 		</a>
-		<form action="cadastro_municipio.php" method="post">
+		<form class = "cadastroEstilo" action="cadastro_municipio.php" method="post">
 			<input type="hidden" name="id_estado"><br>
       <label class="l1">Estado</label>
       <select required class="l1" name="estado">
