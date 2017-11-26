@@ -1,15 +1,19 @@
 <?php
+  require_once 'config.php';
+  session_start();
+  if (!isLogado()) {
+    echo "<script>alert('Entre para acessar.');</script>";
+    echo "<script language=\"javascript\">window.location=\"login.php\";</script>";
+  }
 
-require_once 'config.php';
+  $SQL_PTD = "SELECT * FROM PARTIDO";
+  $SQL_EST = "SELECT * FROM ESTADO";
 
-$SQL_PTD = "SELECT * FROM PARTIDO";
-$SQL_EST = "SELECT * FROM ESTADO";
+  $stmt_ptd = $conn->prepare($SQL_PTD);
+  $stmt_est = $conn->prepare($SQL_EST);
 
-$stmt_ptd = $conn->prepare($SQL_PTD);
-$stmt_est = $conn->prepare($SQL_EST);
-
-$stmt_ptd->execute();
-$stmt_est->execute();
+  $stmt_ptd->execute();
+  $stmt_est->execute();
 
 
  ?>

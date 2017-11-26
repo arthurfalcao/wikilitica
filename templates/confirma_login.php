@@ -10,7 +10,7 @@ if (empty($email) || empty($senha)) {
 	exit;
 }
 
-$SQL = "SELECT EMAIL, SENHA FROM usuario WHERE email = ? AND senha = ?";
+$SQL = "SELECT * FROM usuario WHERE email = ? AND senha = ?";
 $stmt = $conn->prepare($SQL);
 $stmt->bindParam(1, $email);
 $stmt->bindParam(1, $senha);
@@ -20,9 +20,11 @@ $stmt->execute();
 $users = $stmt->fetchAll(PDO::FETCH_ASSOC);
 
 $user = $users[0];
+
 session_start();
 $_SESSION['logged_in'] = true;
 $_SESSION['user_email'] = $user['nEmail'];
+
 echo "<script>alert('Usuário logado com sucesso');</script>";
 echo "<script language=\"javascript\">window.location=\"../index.php\";</script>";
 

@@ -1,5 +1,6 @@
 <?php
   require_once 'config.php';
+  session_start();
 
   $SQL = "SELECT * FROM ESTADO";
   $stmt = $conn->prepare($SQL);
@@ -43,7 +44,7 @@ if (isset($_POST['button'])) {
 <body>
 	<?php include "cabecalho.php" ?>
 	<div class ="caixa" id="cadastro_candidato">
-		<a href="./estado.html">
+		<a href="./mostrar_lista.php">
 		<img  class="imagemCaixa" src="../static/img/buscar.png" alt="logo">
 		</a>
 			<form class="cadastroEstilo" method="post" action="<?php $PHP_SELF; ?>">

@@ -1,5 +1,10 @@
 <?php
   require_once 'config.php';
+  session_start();
+  if (!isLogado()) {
+    echo "<script>alert('Entre para acessar.');</script>";
+    echo "<script language=\"javascript\">window.location=\"login.php\";</script>";
+  }
 
   $SQL = "SELECT * FROM ESTADO";
   $stmt = $conn->prepare($SQL);
@@ -18,7 +23,7 @@
 <body>
 	<?php include "cabecalho.php" ?>
 	<div class ="caixa" id="cadastro_candidato">
-		<a href="./estado.html">
+		<a href="./municipio.php">
 			<img  class="imagemCaixa" src="../static/img/logo_c_cidade-estado.png" alt="logo">
 		</a>
 		<form class = "cadastroEstilo" action="cadastro_municipio.php" method="post">

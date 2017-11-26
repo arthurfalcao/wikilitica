@@ -1,3 +1,12 @@
+<?php
+require_once 'config.php';
+
+session_start();
+if (isLogado()) {
+	header('Location: ../index.php');
+}
+ ?>
+
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
@@ -9,7 +18,7 @@
 <body>
 	<?php include "cabecalho.php" ?>
 	<div class ="caixa" id="cadastro">
-		<a href="../index.html">
+		<a href="./cadastro.php">
 			<img  class="imagemCaixa"  src="../static/img/registro.png" alt="logo">
 		</a>
 		<form class = "cadastroEstilo" name="cadastro" action="confcadastro.php" method="post">

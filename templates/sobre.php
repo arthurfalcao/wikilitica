@@ -1,3 +1,8 @@
+<?php
+require_once 'config.php';
+session_start();
+ ?>
+
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
@@ -11,7 +16,7 @@
 
 		<div class="corpo" id="conteudo">
 			<div class="corpo" id="cabecalho">
-			<img    src="../static/img/logo_sobre.png" alt="logo" height="80px" width="270px">
+			<img src="../static/img/logo_sobre.png" alt="logo" height="80px" width="270px">
 		</div>
 			<p>
 				Área destinada ao LEIA-ME

@@ -1,7 +1,11 @@
 <div class = "content" id="master">
   <nav>
-    <a href="login.php">Entrar</a> |
-    <a href="cadastro.php">Criar Conta</a>
+    <?php if (isLogado()): ?>
+      <a href="logout.php">Sair</a>
+    <?php else: ?>
+      <a href="login.php">Entrar</a> |
+      <a href="cadastro.php">Criar Conta</a>
+    <?php endif; ?>
   </nav>
   <div id="header">
     <a href="../index.php">
@@ -15,7 +19,7 @@
             <a href="candidato.php">Candidatos</a>
              <a href="partido.php">Partidos</a>
              <a href="estado.php">Estado</a>
-             <a href="municipio.php">Município</a> 
+             <a href="municipio.php">Município</a>
           </div>
         </li>
         <li><a href="sobre.php">Sobre</a></li>

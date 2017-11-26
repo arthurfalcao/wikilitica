@@ -1,3 +1,12 @@
+<?php
+require_once 'config.php';
+session_start();
+if (!isLogado()) {
+	echo "<script>alert('Entre para acessar.');</script>";
+	echo "<script language=\"javascript\">window.location=\"login.php\";</script>";
+}
+ ?>
+
 <!DOCTYPE html>
 <html>
 <head>
@@ -10,7 +19,7 @@
 	<?php include "cabecalho.php" ?>
 	<section>
 		<div class ="caixa" id="cadastro_partido">
-			<a><img  class="imagemCaixa"  src="../static/img/logo c_partido.png" alt="logo" height="20px" width="80px"></a>
+			<a href="./partido.php"><img  class="imagemCaixa"  src="../static/img/logo c_partido.png" alt="logo" height="20px" width="80px"></a>
 			<form class = "cadastroEstilo" name="cadastro" action="cadastro_partido.php" method="post">
 				<input type="hidden" name="id_partido">
 				<label for="nome" class="l1">Nome do Partido</label>

@@ -1,3 +1,12 @@
+<?php
+require_once 'config.php';
+
+session_start();
+if (isLogado()) {
+	header('Location: ../index.php');
+}
+ ?>
+
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
@@ -9,7 +18,7 @@
 <body>
   <?php include "cabecalho.php" ?>
 	<div class ="caixa" id="login">
-		<a href="./login.html">
+		<a href="./login.php">
 			<img  class="imagemCaixa"  src="../static/img/login.png" alt="logo" height="20px" width="80px">
 		</a>
 		<form class = "cadastroEstilo" name="login" action="confirma_login.php" method="post">
