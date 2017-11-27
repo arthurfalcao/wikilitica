@@ -57,6 +57,7 @@ li a:hover {
 #header{
     width:75%;
     margin: 0 auto;
+    font-family: 'Arial';
 }
 #master{
     width:100%;
