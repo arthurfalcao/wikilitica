@@ -9,6 +9,7 @@
 if (isset($_POST['button'])) {
   $nomeCandidato = $_POST['nome_candidato'];
   $idEstado = $_POST['estado'];
+  $funcao = $_POST['funcao'];
 
   $SQL_PTD = "SELECT
   POLITICO.ID_POLITICO,
@@ -18,16 +19,14 @@ if (isset($_POST['button'])) {
 
   FROM POLITICO
 
-  INNER JOIN PARTIDO
-  ON PARTIDO.ID_PARTIDO = POLITICO.PARTIDO
   INNER JOIN ESTADO
   ON ESTADO.ID_ESTADO = POLITICO.ESTADO
 
-  WHERE POLITICO.NOME LIKE ? AND POLITICO.ESTADO = ?
+  WHERE POLITICO.NOME LIKE ? AND POLITICO.ESTADO = ? AND POLITICO.FUNCAO = ?
   ";
 
   $stmt_can = $conn->prepare($SQL_PTD);
-  $params = array("%$nomeCandidato%", $idEstado);
+  $params = array("%$nomeCandidato%", $idEstado, $funcao);
   $stmt_can->execute($params);
 }
  ?>
@@ -59,8 +58,8 @@ if (isset($_POST['button'])) {
       			</select><br><br>
       			<label for="funcao" class="l1">Função</label>
 					<select required class="l1" name="funcao" id="funcao">
-						<option value="selecione" selected="selected">Selecione</option>
-            			<option>Vereador</option>
+						<option value="" selected="selected">Selecione</option>
+            <option>Vereador</option>
 						<option>Prefeito</option>
 						<option>D.Estadual</option>
 						<option>D.Federal</option>
