@@ -72,11 +72,11 @@ if (isset($_POST['button'])) {
 			<br>
 	</div>
   <?php if (isset($_POST['button'])) { ?>
-    <table>
+    <table id="tab1">
       <tr>
-        <th>Candidato</th>
-        <th>Estado</th>
-        <th>Função</th>
+        <th>Candidato:</th>
+        <th>Estado:</th>
+        <th>Função:</th>
       </tr>
       <?php while($canditados = $stmt_can->fetch(PDO::FETCH_ASSOC)) { ?>
         <tr>
@@ -85,7 +85,7 @@ if (isset($_POST['button'])) {
           <td><?php echo $canditados['FUNCAO'] ?></td>
           <td>
             <form action="cad_perfil.php" method="post">
-              <button type="submit" value="<?php echo $canditados['ID_POLITICO'] ?>" name="btn-can">Perfil</button>
+              <button  class="bt"> type="submit" value="<?php echo $canditados['ID_POLITICO'] ?>" name="btn-can">Perfil</button>
             </form>
           </td>
         </tr>

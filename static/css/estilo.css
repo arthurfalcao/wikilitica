@@ -179,3 +179,14 @@ li.dropdown {
     bottom:0;
     width:100%;
 }
+#tab1{
+    margin: 0;
+    font-family: Corbel;
+    font-size: 20px;
+    vertical-align: top;
+    width: 400px; 
+    position: relative; 
+    left:50%; 
+    height: 200%;
+    margin: 0 0 0-200px;
+}
