@@ -51,8 +51,11 @@ $canditados = $stmt->fetch(PDO::FETCH_ASSOC);
 	<label>Função: <?php echo $canditados['FUNCAO'] ?></label><br>
 	<label>Partido: <?php echo $canditados['PARTIDO'] ?></label><br>
 	<label>Estado: <?php echo $canditados['ESTADO'] ?></label><br>
+     <form action="editar.php" method="post">
+              <button  id="bt1" type="submit" value="<?php echo $canditados['ID_POLITICO'] ?>" name="btn-edit">Editar</button>
+     </form>
      </div>
-	<button type="submit" name="button" class="bt">Excluir</button>
+
 
 <?php include "rodape.php" ?>
 </body>

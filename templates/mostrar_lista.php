@@ -44,7 +44,7 @@ if (isset($_POST['button'])) {
 	<?php include "cabecalho.php" ?>
 	<div class ="caixa" id="cadastro_candidato">
 		<a href="./mostrar_lista.php">
-		<img  class="imagemCaixa" src="../static/img/buscar.png" alt="logo">
+			<img  height="60px" width="180px" src="../static/img/buscar.png" alt="logo">
 		</a>
 			<form class="cadastroEstilo" method="post" action="<?php $PHP_SELF; ?>">
 				<label for="nome_candidato" class="l1">Nome do Candidato</label>

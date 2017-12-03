@@ -190,3 +190,24 @@ li.dropdown {
     height: 200%;
     margin: 0 0 0-200px;
 }
+#tab1{
+    margin: 0;
+    font-family: Corbel;
+    font-size: 20px;
+    vertical-align: top;
+    width: 400px; 
+    position: relative; 
+    left:50%; 
+    height: 200%;
+    margin: 0 0 0-200px;
+}
+#l2{
+    font-family: Corbel;
+    font-size: 20px;
+     padding: 390px;
+}
+#bt1{
+        position: relative; 
+        left:40%; 
+        background-color: #2980b9;
+}
