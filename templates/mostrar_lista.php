@@ -83,11 +83,7 @@ if (isset($_POST['button'])) {
           <td><?php echo $canditados['NOME'] ?></td>
           <td><?php echo $canditados['ESTADO'] ?></td>
           <td><?php echo $canditados['FUNCAO'] ?></td>
-          <td>
-            <form action="cad_perfil.php" method="post">
-              <button class="bt" type="submit" value="<?php echo $canditados['ID_POLITICO'] ?>" name="btn-can">Perfil</button>
-            </form>
-          </td>
+          <td><button class="bt" onclick="window.location.href='/wikilitica/templates/cad_perfil.php?id=<?php echo $canditados['ID_POLITICO'] ?>'">Perfil</button></td>
         </tr>
       <?php } ?>
     </table>

@@ -1,7 +1,7 @@
 <?php
 require_once 'config.php';
 
-$idPolitico = $_POST['btn-can'];
+$idPolitico = $_GET['id'];
 
 $SQL_PTD = "SELECT
 POLITICO.ID_POLITICO,
