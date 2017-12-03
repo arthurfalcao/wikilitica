@@ -85,7 +85,7 @@ if (isset($_POST['button'])) {
           <td><?php echo $canditados['FUNCAO'] ?></td>
           <td>
             <form action="cad_perfil.php" method="post">
-              <button  class="bt"> type="submit" value="<?php echo $canditados['ID_POLITICO'] ?>" name="btn-can">Perfil</button>
+              <button class="bt" type="submit" value="<?php echo $canditados['ID_POLITICO'] ?>" name="btn-can">Perfil</button>
             </form>
           </td>
         </tr>
