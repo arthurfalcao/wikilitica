@@ -44,13 +44,13 @@ $canditados = $stmt->fetch(PDO::FETCH_ASSOC);
 			<img    src="../static/img/logo_candidato.png" alt="logo" height="80px" width="270px">
 		</div>
 	<div class="corpo" id="conteudo">
-	<label id="l2">Nome: <?php echo $canditados['NOME'] ?></label><br>
-	<label id="l2">Idade: <?php echo $canditados['DATA_NASC'] ?></label><br>
-	<label id="l2">Sexo: <?php echo $canditados['SEXO'] ?></label><br>
-	<label id="l2">Profissão: <?php echo $canditados['PROFISSAO'] ?></label><br>
-	<label id="l2">Função: <?php echo $canditados['FUNCAO'] ?></label><br>
-	<label id="l2">Partido: <?php echo $canditados['PARTIDO'] ?></label><br>
-	<label id="l2">Estado: <?php echo $canditados['ESTADO'] ?></label><br>
+	<label class="l2">Nome: <?php echo $canditados['NOME'] ?></label><br>
+	<label class="l2">Idade: <?php echo $canditados['DATA_NASC'] ?></label><br>
+	<label class="l2">Sexo: <?php echo $canditados['SEXO'] ?></label><br>
+	<label class="l2">Profissão: <?php echo $canditados['PROFISSAO'] ?></label><br>
+	<label class="l2">Função: <?php echo $canditados['FUNCAO'] ?></label><br>
+	<label class="l2">Partido: <?php echo $canditados['PARTIDO'] ?></label><br>
+	<label class="l2">Estado: <?php echo $canditados['ESTADO'] ?></label><br>
      <form action="editar.php" method="post">
               <button  id="bt1" type="submit" value="<?php echo $canditados['ID_POLITICO'] ?>" name="btn-edit">Editar</button>
      </form>
