@@ -54,6 +54,9 @@ $canditados = $stmt->fetch(PDO::FETCH_ASSOC);
      <form action="editar.php" method="post">
               <button  id="bt1" type="submit" value="<?php echo $canditados['ID_POLITICO'] ?>" name="btn-edit">Editar</button>
      </form>
+     <form action="apagar.php" method="post">
+              <button  id="bt1" type="submit" value="<?php echo $canditados['ID_POLITICO'] ?>" name="btn-edit">Excluir</button>
+     </form>
      </div>
 
 
