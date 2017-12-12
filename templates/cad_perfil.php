@@ -51,12 +51,7 @@ $canditados = $stmt->fetch(PDO::FETCH_ASSOC);
 	<label class="l2">Função: <?php echo $canditados['FUNCAO'] ?></label><br>
 	<label class="l2">Partido: <?php echo $canditados['PARTIDO'] ?></label><br>
 	<label class="l2">Estado: <?php echo $canditados['ESTADO'] ?></label><br>
-     <form action="editar.php" method="post">
-              <button  class="bt1" type="submit" value="<?php echo $canditados['ID_POLITICO'] ?>" name="btn-edit">Editar</button>
-     </form>
-     <form action="apagar.php" method="post">
-              <button  class="bt1" type="submit" value="<?php echo $canditados['ID_POLITICO'] ?>" name="btn-edit">Excluir</button>
-     </form>
+    <a href="/wikilitica/templates/apagar.php?id=<?php echo $canditados['ID_POLITICO'] ?>'">Apagar</a>   
      </div>
 
 

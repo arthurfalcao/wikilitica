@@ -7,17 +7,16 @@
   }
 
   // pega o ID da URL
-$id = isset($_GET['ID_POLITICO']) ? (int) $_GET['ID_POLITICO'] : null;
+$id = isset($_GET['id']) ? (int) $_GET['id'] : null;
 
 //Valida a variavel da URL
 if (empty($id)){
 	echo "ID para alteração não definido";
     exit;
 }
-$PDO = db_connect();
-$sql_delete = "DELETE  from politico WHERE id = :ID_POLITICO";
-$delete = $PDO->prepare($sql_delete);
-$delete->binParam(':ID_POLITICO', $id, PDO::PARAM_INT);
+$sql_delete = "DELETE FROM politico WHERE id = :id";
+$delete = $conn->prepare($sql_delete);
+$delete->binParam(':id', $id, PDO::PARAM_INT);
 
 if($sql_delete->execute()){
   header('Location: index.php');
