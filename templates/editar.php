@@ -1,8 +1,6 @@
 
  <?php
-  
-  $pol_codigo = intval($_GET['candidato']);
-  require_once 'config.php';
+  require_once "config.php";
   session_start();
   if (!isLogado()) {
     echo "<script>alert('Entre para acessar.');</script>";
@@ -10,7 +8,7 @@
   }
 
   // pega o ID da URL
-$id = isset($_GET['ID_POLITICO']) ? (int) $_GET['ID_POLITICO'] : null;
+$id = isset($_GET['id']) ? (int) $_GET['id'] : null;
 
 //Valida a variavel da URL
 if (empty($id)){
@@ -18,20 +16,14 @@ if (empty($id)){
     exit;
 }
 
-PDO = db_connect();
-$sql_id = "SELECT * FROM politico";
-$sql_id = $PDO->prepare($sql_id);
-$sql_id->bindParam('ID_POLITICO', $id, PDO::PARAM_INT);
+
+$sql_id = "SELECT * FROM politico WHERE ID_POLITICO = ?";
+$sql_id = $conn->prepare($sql_id);
+$sql_id->bindParam(1, $id);
 
 $sql_id->execute();
 
 $sql_result_id = $sql_id->fetch(PDO::FETCH_ASSOC);
-
-if(!is_array($sql_result_id){
-
-echo "Nenhum contato encontrado";
-    exit;	
-}
 
   //select do estado e partido
   $SQL_PTD = "SELECT * FROM PARTIDO";
@@ -62,7 +54,7 @@ echo "Nenhum contato encontrado";
 		</a>
 		<form class = "cadastroEstilo" name="editar" action="confedit.php" method="post">
 			<label>Editando Candidato: <?php echo $sql_result_id['NOME']; ?></label><br>
-
+			
 			<label for="nome" class="l1">Nome</label><br>
 			<input required type="text" name="nome" id="nome" value="<?php echo $sql_result_id['NOME']; ?>"><br>
 			<label for="sexo" class="l1">Sexo</label>
