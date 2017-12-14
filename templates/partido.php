@@ -35,7 +35,7 @@ if (!isLogado()) {
 				</select><br><br>
 				<br>
 				<br>
-				<button type="submit" name="button" class="bt">Cadastrar</button>
+				<button type="submit" name="button" class="btn">Cadastrar</button>
 			</form>
 			<br>
 		</div>

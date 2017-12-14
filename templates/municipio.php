@@ -37,7 +37,7 @@
       </select><br><br>
 			<label for="municipio" class="l1">Municipio</label>
 			<input required type="text" name="municipio" id="municipio">
-			<button type="submit" class="bt" name="button">Cadastrar</button>
+			<button type="submit" class="btn" name="button">Cadastrar</button>
 		</form>
 		<br>
 	</div>

@@ -47,7 +47,7 @@ if (isLogado()) {
 			<label class="l1" for="iCid">Cidade</label><br>
 			<input required type="text" name="nCid" id="iCid"><br>
 			<br>
-			<button class="bt" type="submit" name="button">Cadastrar</button>
+			<button class="btn" type="submit" name="button">Cadastrar</button>
 		</form>
 		<br>
 	</div>

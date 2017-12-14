@@ -1,7 +1,6 @@
-
- <?php
+ <?php session_start();
   require_once "config.php";
-  session_start();
+
   if (!isLogado()) {
     echo "<script>alert('Entre para acessar.');</script>";
     echo "<script language=\"javascript\">window.location=\"login.php\";</script>";
@@ -12,26 +11,25 @@ $id = isset($_GET['id']) ? (int) $_GET['id'] : null;
 
 //Valida a variavel da URL
 if (empty($id)){
-	echo "ID para alteração não definido";
-    exit;
+  echo "ID para alteração não definido";
+  exit;
 }
 
+$SQL = "SELECT * FROM politico WHERE ID_POLITICO = ?";
+$SQL = $conn->prepare($SQL);
+$SQL->bindParam(1, $id);
 
-$sql_id = "SELECT * FROM politico WHERE ID_POLITICO = ?";
-$sql_id = $conn->prepare($sql_id);
-$sql_id->bindParam(1, $id);
+$SQL->execute();
 
-$sql_id->execute();
-
-$sql_result_id = $sql_id->fetch(PDO::FETCH_ASSOC);
+$sql_result_id = $SQL->fetch(PDO::FETCH_ASSOC);
 
   //select do estado e partido
   $SQL_PTD = "SELECT * FROM PARTIDO";
   $SQL_EST = "SELECT * FROM ESTADO";
- 
+
   $stmt_ptd = $conn->prepare($SQL_PTD);
   $stmt_est = $conn->prepare($SQL_EST);
- 
+
   $stmt_ptd->execute();
   $stmt_est->execute();
 ?>
@@ -54,23 +52,23 @@ $sql_result_id = $sql_id->fetch(PDO::FETCH_ASSOC);
 		</a>
 		<form class = "cadastroEstilo" name="editar" action="confedit.php" method="post">
 			<label>Editando Candidato: <?php echo $sql_result_id['NOME']; ?></label><br>
-			
+
 			<label for="nome" class="l1">Nome</label><br>
 			<input required type="text" name="nome" id="nome" value="<?php echo $sql_result_id['NOME']; ?>"><br>
 			<label for="sexo" class="l1">Sexo</label>
-					<select required class="l1" name="sexo" id="sexo" value="<?php echo $sql_result_id['SEXO']; ?>">
-						<option value="selecione" selected="selected">Selecione</option>
-						<option value="masculino">Masculino</option>
-						<option value="feminino">Feminino</option>
-					</select><br><br>
+			<select required class="l1" name="sexo" id="sexo" value="<?php echo $sql_result_id['SEXO']; ?>">
+				<option>Selecione</option>
+				<option>Masculino</option>
+				<option>Feminino</option>
+			</select><br><br>
 			<label for="data_nasc" class="l1">Data de Nascimento</label>
 			<input required type="date" name="data_nasc" id="data_nasc" value="<?php echo $sql_result_id['DATA_NASC']; ?>">
 			<label for="profissao" class="l1">Profissão</label><br>
 			<input required type="text" name="profissao" id="profissao" value="<?php echo $sql_result_id['PROFISSAO']; ?>"><br>
 			<label for="funcao" class="l1">Função</label>
 					<select required class="l1" name="funcao" id="funcao" value="<?php echo $sql_result_id['FUNCAO']; ?>">
-						<option value="selecione" selected="selected">Selecione</option>
-            			<option>Vereador</option>
+						<option selected="selected">Selecione</option>
+            <option>Vereador</option>
 						<option>Prefeito</option>
 						<option>D.Estadual</option>
 						<option>D.Federal</option>
@@ -96,11 +94,10 @@ $sql_result_id = $sql_id->fetch(PDO::FETCH_ASSOC);
 				  </select><br><br>
 			<br>
 			<br>
-			<button type="submit" name="button" class="bt">Editar</button>
+			<button type="submit" name="button" class="btn">Editar</button>
 		</form>
 		<br>
 	</div>
 	<?php include "rodape.php" ?>
 </body>
 </html>
-

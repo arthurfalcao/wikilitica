@@ -19,7 +19,7 @@ if (isLogado()) {
   <?php include "cabecalho.php" ?>
 	<div class ="caixa" id="login">
 		<a href="./login.php">
-			<img  class="imagemCaixa"  src="../static/img/login.png" alt="logo" height="20px" width="80px">
+			<img class="imagemCaixa"  src="../static/img/login.png" alt="logo" height="20px" width="80px">
 		</a>
 		<form class = "cadastroEstilo" name="login" action="confirma_login.php" method="post">
 			<label id="l1">Email:</label><br>
@@ -28,7 +28,7 @@ if (isLogado()) {
 			<input type="password" name="nSenha" id="iSenha"><br><br>
 			<label><input style="width: 10px;" type="radio" value="Lembrar Senha"> Lembrar Senha</label>
 			<br><br>
-			<button class="bt" type="submit" name="button">Entrar</button>
+			<button class="btn" type="submit" name="button">Entrar</button>
 		</form>
 		<br>
 	</div>

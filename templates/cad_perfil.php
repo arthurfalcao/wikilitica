@@ -41,22 +41,19 @@ $canditados = $stmt->fetch(PDO::FETCH_ASSOC);
 <body>
 	<?php include "cabecalho.php" ?>
 	<div class="corpo" id="cabecalho">
-			<img    src="../static/img/logo_candidato.png" alt="logo" height="80px" width="270px">
-		</div>
+			<img src="../static/img/logo_candidato.png" alt="logo" height="80px" width="270px">
+	</div>
 	<div class="corpo" id="conteudo">
-	<label class="l2">Nome: <?php echo $canditados['NOME'] ?></label><br>
-	<label class="l2">Idade: <?php echo $canditados['DATA_NASC'] ?></label><br>
-	<label class="l2">Sexo: <?php echo $canditados['SEXO'] ?></label><br>
-	<label class="l2">Profissão: <?php echo $canditados['PROFISSAO'] ?></label><br>
-	<label class="l2">Função: <?php echo $canditados['FUNCAO'] ?></label><br>
-	<label class="l2">Partido: <?php echo $canditados['PARTIDO'] ?></label><br>
-	<label class="l2">Estado: <?php echo $canditados['ESTADO'] ?></label><br>
-        
-    <button type="button" class="bt1" onclick="window.location.href='/wikilitica/templates/apagar.php?id=<?php echo $canditados['ID_POLITICO'] ?>'">Apagar</button>  
-    <button type="button" class="bt1" onclick="window.location.href='/wikilitica/templates/editar.php?id=<?php echo $canditados['ID_POLITICO'] ?>'">Editar</button>  
-     </div>
-
-
+  	<label class="l2">Nome: <?php echo $canditados['NOME'] ?></label><br>
+  	<label class="l2">Idade: <?php echo $canditados['DATA_NASC'] ?></label><br>
+  	<label class="l2">Sexo: <?php echo $canditados['SEXO'] ?></label><br>
+  	<label class="l2">Profissão: <?php echo $canditados['PROFISSAO'] ?></label><br>
+  	<label class="l2">Função: <?php echo $canditados['FUNCAO'] ?></label><br>
+  	<label class="l2">Partido: <?php echo $canditados['PARTIDO'] ?></label><br>
+  	<label class="l2">Estado: <?php echo $canditados['ESTADO'] ?></label><br>
+    <button type="button" class="btn" onclick="window.location.href='/wikilitica/templates/apagar.php?id=<?php echo $canditados['ID_POLITICO'] ?>'">Apagar</button>
+    <button type="button" class="btn" onclick="window.location.href='/wikilitica/templates/editar.php?id=<?php echo $canditados['ID_POLITICO'] ?>'">Editar</button>
+  </div>
 <?php include "rodape.php" ?>
 </body>
 </html>

@@ -44,7 +44,7 @@ if (isset($_POST['button'])) {
 	<?php include "cabecalho.php" ?>
 	<div class ="caixa" id="cadastro_candidato">
 		<a href="./mostrar_lista.php">
-			<img  height="60px" width="180px" src="../static/img/buscar.png" alt="logo">
+			<img src="../static/img/buscar.png" alt="buscar" class="img-buscar">
 		</a>
 			<form class="cadastroEstilo" method="post" action="<?php $PHP_SELF; ?>">
 				<label for="nome_candidato" class="l1">Nome do Candidato</label>
@@ -67,23 +67,23 @@ if (isset($_POST['button'])) {
 						<option>Senador</option>
 						<option>Presidente</option>
 				 	</select><br><br>
-				 <button type="submit" class="bt" name="button">Buscar</button>
+				 <button type="submit" class="btn" name="button">Buscar</button>
 			</form>
 			<br>
 	</div>
   <?php if (isset($_POST['button'])) { ?>
     <table id="tab1">
       <tr>
-        <th>Candidato:</th>
-        <th>Estado:</th>
-        <th>Função:</th>
+        <th>Candidato</th>
+        <th>Estado</th>
+        <th>Função</th>
       </tr>
       <?php while($canditados = $stmt_can->fetch(PDO::FETCH_ASSOC)) { ?>
         <tr>
           <td><?php echo $canditados['NOME'] ?></td>
           <td><?php echo $canditados['ESTADO'] ?></td>
           <td><?php echo $canditados['FUNCAO'] ?></td>
-          <td><button class="bt" onclick="window.location.href='/wikilitica/templates/cad_perfil.php?id=<?php echo $canditados['ID_POLITICO'] ?>'">Perfil</button></td>
+          <td><button class="btn" onclick="window.location.href='/wikilitica/templates/cad_perfil.php?id=<?php echo $canditados['ID_POLITICO'] ?>'">Perfil</button></td>
         </tr>
       <?php } ?>
     </table>
