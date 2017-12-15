@@ -56,6 +56,7 @@ $sql_result_id = $SQL->fetch(PDO::FETCH_ASSOC);
 			<label for="nome" class="l1">Nome</label><br>
 			<input required type="text" name="nome" id="nome" value="<?php echo $sql_result_id['NOME']; ?>"><br>
 			<label for="sexo" class="l1">Sexo</label>
+			<label>Opção Atual: <?php echo $sql_result_id['SEXO']; ?></label><br>
 			<select required class="l1" name="sexo" id="sexo" value="<?php echo $sql_result_id['SEXO']; ?>">
 				<option>Selecione</option>
 				<option>Masculino</option>
@@ -66,9 +67,10 @@ $sql_result_id = $SQL->fetch(PDO::FETCH_ASSOC);
 			<label for="profissao" class="l1">Profissão</label><br>
 			<input required type="text" name="profissao" id="profissao" value="<?php echo $sql_result_id['PROFISSAO']; ?>"><br>
 			<label for="funcao" class="l1">Função</label>
+					<label>Opção Atual: <?php echo $sql_result_id['FUNCAO']; ?></label><br>
 					<select required class="l1" name="funcao" id="funcao" value="<?php echo $sql_result_id['FUNCAO']; ?>">
 						<option selected="selected">Selecione</option>
-            <option>Vereador</option>
+            			<option>Vereador</option>
 						<option>Prefeito</option>
 						<option>D.Estadual</option>
 						<option>D.Federal</option>
@@ -86,6 +88,7 @@ $sql_result_id = $SQL->fetch(PDO::FETCH_ASSOC);
       </select><br><br>
 
 			<label for="partido" class="l1">Partido atual</label>
+				
 					<select required class="l1" name="partido" id="partido" value="<?php echo $sql_result_id['PARTIDO']; ?>">
 						<option value="selecione" selected="selected">Selecione</option>
 						<?php while($ptd = $stmt_ptd->fetch(PDO::FETCH_ASSOC)) { ?>

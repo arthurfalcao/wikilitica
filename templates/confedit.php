@@ -9,8 +9,8 @@ $profissao = $_POST['profissao'];
 $funcao = $_POST['funcao'];
 $estado = $_POST['estado'];
 $partido = $_POST['partido'];
-$id = $_POST['id_politico'];
-$SQL = "UPDATE POLITICO, ESTADO, PARTIDO SET (NOME = ?, DATA_NASC = ?, SEXO = ?, PROFISSAO = ?, FUNCAO = ?, ESTADO = ?, PARTIDO = ?) WHERE ID_POLITICO = ?";
+
+$SQL = "UPDATE POLITICO, ESTADO, PARTIDO SET NOME = ?, DATA_NASC = ?, SEXO = ?, PROFISSAO = ?, FUNCAO = ?, ESTADO = ?, PARTIDO = ?WHERE ID_POLITICO = ?";
         
 $stmt = $conn->prepare($SQL);
 $stmt->bindParam(1, $nome);
