@@ -32,7 +32,7 @@
       <select required class="l1" name="estado">
         <option>Selecione</option>
         <?php while($est = $stmt->fetch(PDO::FETCH_ASSOC)) { ?>
-          <option value="<?php echo $est['ID_ESTADO'] ?>"><?php echo $est['NOME'] ?></option>
+          <option value="<?php echo $est['ID_ESTADO'] ?>"><?php echo utf8_encode($est['NOME']) ?></option>
         <?php } ?>
       </select><br><br>
 			<label for="municipio" class="l1">Municipio</label>

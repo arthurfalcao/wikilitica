@@ -4,7 +4,7 @@ require_once 'config.php';
 
 $email = $_POST['nEmail'];
 $senha = $_POST['nSenha'];
-$cpf = $_POST['nEmail'];
+$cpf = $_POST['nCPF'];
 $nome = $_POST['nNome'];
 $telefone = $_POST['nTelefone'];
 $datanasc = $_POST['nData'];

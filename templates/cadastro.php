@@ -37,8 +37,8 @@ if (isLogado()) {
 			<label class="l1">Sexo</label>
 			<select class"l1" name="nSexo" id="iSexo">
 						<option selected="selected">Selecione</option>
-						<option value="masculino">Masculino</option>
-						<option value="feminino">Feminino</option>
+						<option value="Masculino">Masculino</option>
+						<option value="Feminino">Feminino</option>
 			</select><br><br>
 			<label class="l1" for="iEnd">Endereço</label>
 			<input required type="text" name="nEnd" id="iEnd"><br>

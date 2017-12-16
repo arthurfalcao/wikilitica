@@ -53,7 +53,7 @@ if (isset($_POST['button'])) {
 				<select required class="l1" name="estado">
         			<option>Selecione</option>
         				<?php while($est = $stmt->fetch(PDO::FETCH_ASSOC)) { ?>
-          			<option value="<?php echo $est['ID_ESTADO'] ?>"><?php echo $est['NOME'] ?></option>
+          			<option value="<?php echo $est['ID_ESTADO'] ?>"><?php echo utf8_encode($est['NOME']) ?></option>
        					<?php } ?>
       			</select><br><br>
       			<label for="funcao" class="l1">Função</label>
@@ -81,7 +81,7 @@ if (isset($_POST['button'])) {
       <?php while($canditados = $stmt_can->fetch(PDO::FETCH_ASSOC)) { ?>
         <tr>
           <td><?php echo $canditados['NOME'] ?></td>
-          <td><?php echo $canditados['ESTADO'] ?></td>
+          <td><?php echo utf8_encode($canditados['ESTADO']) ?></td>
           <td><?php echo $canditados['FUNCAO'] ?></td>
           <td><button class="btn" onclick="window.location.href='/wikilitica/templates/cad_perfil.php?id=<?php echo $canditados['ID_POLITICO'] ?>'">Perfil</button></td>
         </tr>
