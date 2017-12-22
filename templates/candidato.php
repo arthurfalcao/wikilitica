@@ -15,7 +15,6 @@
   $stmt_ptd->execute();
   $stmt_est->execute();
 
-
  ?>
 
 <!DOCTYPE html>
@@ -65,14 +64,13 @@
           <option value="<?php echo $est['ID_ESTADO'] ?>"><?php echo utf8_encode($est['NOME']) ?></option>
         <?php } ?>
       </select><br><br>
-
 			<label for="partido" class="l1">Partido atual</label>
-					<select required class="l1" name="partido" id="partido">
-						<option value="selecione" selected="selected">Selecione</option>
-						<?php while($ptd = $stmt_ptd->fetch(PDO::FETCH_ASSOC)) { ?>
-		          <option value="<?php echo $ptd['ID_PARTIDO'] ?>"><?php echo $ptd['SIGLA'] ?></option>
-		        <?php } ?>
-				  </select><br><br>
+			<select required class="l1" name="partido" id="partido">
+				<option value="selecione" selected="selected">Selecione</option>
+				<?php while($ptd = $stmt_ptd->fetch(PDO::FETCH_ASSOC)) { ?>
+          <option value="<?php echo $ptd['ID_PARTIDO'] ?>"><?php echo $ptd['SIGLA'] ?></option>
+        <?php } ?>
+		  </select><br><br>
 			<br>
 			<br>
 			<button type="submit" name="button" class="btn">Cadastrar</button>

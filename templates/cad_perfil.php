@@ -48,7 +48,7 @@ $idade = $hoje - $nascimento ;
 			<img src="../static/img/logo_candidato.png" alt="logo" height="80px" width="270px">
 	</div>
 	<div class="corpo" id="conteudo">
-  	<label class="l2">Nome: <?php echo $canditados['NOME'] ?></label><br>
+  	<label class="l2">Nome: <?php utf8_encode($canditados['NOME']) ?></label><br>
   	<label class="l2">Idade: <?php echo $idade ?></label><br>
   	<label class="l2">Sexo: <?php echo $canditados['SEXO'] ?></label><br>
   	<label class="l2">Profissão: <?php echo $canditados['PROFISSAO'] ?></label><br>

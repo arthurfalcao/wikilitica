@@ -4,7 +4,7 @@
 <html>
   <head>
     <meta charset="utf-8">
-    <title></title>
+    <title>Perfil</title>
   </head>
   <body>
     <?php include "cabecalho.php" ?>

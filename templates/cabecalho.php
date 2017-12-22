@@ -1,4 +1,4 @@
-<div class = "content" id="master">
+<div class="content" id="master">
   <nav>
     <?php if (isLogado()): ?>
       <a href="logout.php">Sair</a>

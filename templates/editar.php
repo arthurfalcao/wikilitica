@@ -50,11 +50,11 @@ $sql_result_id = $SQL->fetch(PDO::FETCH_ASSOC);
 		<a href="./cadastro_candidato.html">
 			<img  class="imagemCaixa" src="../static/img/logo c_politco.png" alt="logo">
 		</a>
-		<form class = "cadastroEstilo" name="editar" action="confedit.php" method="post">
-			<label>Editando Candidato: <?php echo $sql_result_id['NOME']; ?></label><br>
+		<form class="cadastroEstilo" name="editar" action="confedit.php" method="post">
+			<label>Editando Candidato: <?php echo utf8_encode($sql_result_id['NOME']); ?></label><br>
 			<input type="hidden" name="id" value="<?php echo $id; ?>">
 			<label for="nome" class="l1">Nome</label><br>
-			<input required type="text" name="nome" id="nome" value="<?php echo $sql_result_id['NOME']; ?>"><br>
+			<input required type="text" name="nome" id="nome" value="<?php echo utf8_encode($sql_result_id['NOME']); ?>"><br>
 			<label for="sexo" class="l1">Sexo</label>
 			<label>Opção Atual: <?php echo $sql_result_id['SEXO']; ?></label><br>
 			<select required class="l1" name="sexo" id="sexo" value="<?php echo $sql_result_id['SEXO']; ?>">
@@ -80,10 +80,10 @@ $sql_result_id = $SQL->fetch(PDO::FETCH_ASSOC);
 		 	</select><br><br>
 			<!--Deverá ter condição para definir os dados que serão exibidos Cidade ou Estado dependendo da Função-->
 			<label for="estado" class="l1">Estado</label>
-			<select required class="l1" name="estado" id="estado" value="<?php echo $sql_result_id['ESTADO']; ?>">
+			<select required class="l1" name="estado" id="estado" value="<?php echo utf8_encode($sql_result_id['ESTADO']); ?>">
         <option>Selecione</option>
         <?php while($est = $stmt_est->fetch(PDO::FETCH_ASSOC)) { ?>
-        <option value="<?php echo $est['ID_ESTADO'] ?>"><?php echo $est['NOME'] ?></option>
+        <option value="<?php echo $est['ID_ESTADO'] ?>"><?php echo utf8_encode($est['NOME']) ?></option>
         <?php } ?>
       </select><br><br>
 

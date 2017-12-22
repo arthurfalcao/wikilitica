@@ -79,7 +79,7 @@
       </tr>
       <?php while($canditados = $stmt_can->fetch(PDO::FETCH_ASSOC)) { ?>
         <tr>
-          <td><?php echo $canditados['NOME'] ?></td>
+          <td><?php echo utf8_encode($canditados['NOME']) ?></td>
           <td><?php echo utf8_encode($canditados['ESTADO']) ?></td>
           <td><?php echo $canditados['FUNCAO'] ?></td>
           <td><button class="btn" onclick="window.location.href='/wikilitica/templates/cad_perfil.php?id=<?php echo $canditados['ID_POLITICO'] ?>'">Perfil</button></td>

@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: 22-Dez-2017 às 04:07
+-- Generation Time: 22-Dez-2017 às 15:56
 -- Versão do servidor: 10.1.28-MariaDB
 -- PHP Version: 7.1.11
 
@@ -38,33 +38,33 @@ CREATE TABLE `estado` (
 --
 
 INSERT INTO `estado` (`ID_ESTADO`, `NOME`) VALUES
-(1, 'ACRE'),
-(2, 'ALAGOAS'),
-(3, 'AMAPA'),
-(4, 'AMAZONAS'),
-(5, 'BAHIA'),
-(6, 'CEARÁ'),
-(7, 'DISTRITO FEDERAL'),
-(8, 'ESPÍRITO SANTO'),
-(9, 'GOIÁS'),
-(10, 'MARANHÃO'),
-(11, 'MATO GROSSO'),
-(12, 'MATO GROSSO DO SUL'),
-(13, 'MINAS GERAIS'),
-(14, 'PARÁ'),
-(15, 'PARAÍBA'),
-(16, 'PARANÁ'),
-(17, 'PERNAMBUCO'),
-(18, 'PIAUÍ'),
-(19, 'RIO DE JANEIRO'),
-(20, 'RIO GRANDE DO NORTE'),
-(21, 'RIO GRANDE DO SUL'),
-(22, 'RÔNDONIA'),
-(23, 'RORAIMA'),
-(24, 'SANTA CATARINA'),
-(25, 'SÃO PAULO'),
-(26, 'SERGIPE'),
-(27, 'TOCANTINS');
+(1, 'Acre'),
+(2, 'Alagoas'),
+(3, 'Amapa'),
+(4, 'Amazonas'),
+(5, 'Bahia'),
+(6, 'Ceará'),
+(7, 'Distrito Federal'),
+(8, 'Espírito Santo'),
+(9, 'Goiás'),
+(10, 'Maranhão'),
+(11, 'Mato Grosso'),
+(12, 'Mato Grosso do Sul'),
+(13, 'Minas Gerais'),
+(14, 'Pará'),
+(15, 'Paraíba'),
+(16, 'Paraná'),
+(17, 'Pernambuco'),
+(18, 'Piauí'),
+(19, 'Rio de Janeiro'),
+(20, 'Rio Grande do Norte'),
+(21, 'Rio Grande do Sul'),
+(22, 'Rôndonia'),
+(23, 'Roraima'),
+(24, 'Santa Catarina'),
+(25, 'São Paulo'),
+(26, 'Sergipe'),
+(27, 'Tocantins');
 
 -- --------------------------------------------------------
 
@@ -77,6 +77,14 @@ CREATE TABLE `historico` (
   `PARTIDOS` varchar(30) DEFAULT NULL,
   `CARGOS` varchar(30) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- Extraindo dados da tabela `historico`
+--
+
+INSERT INTO `historico` (`ID_POLITICO`, `PARTIDOS`, `CARGOS`) VALUES
+(NULL, '1', 'Presidente'),
+(9, '1', 'Vereador');
 
 -- --------------------------------------------------------
 
@@ -140,9 +148,13 @@ CREATE TABLE `politico` (
 --
 
 INSERT INTO `politico` (`ID_POLITICO`, `NOME`, `DATA_NASC`, `SEXO`, `PROFISSAO`, `FUNCAO`, `ESTADO`, `PARTIDO`) VALUES
-(1, 'Arthur JosÃ© Vasconcelos FalcÃ', '1998-11-17', 'masculino', 'Desenvolvedor Full-Stack', 'Presidente', 2, 1),
+(1, 'Arthur José Vasconcelos Falcão', '1998-11-17', 'masculino', 'Desenvolvedor Full-Stack', 'Presidente', 2, 1),
 (3, 'Franklin', '1995-07-29', 'Selecione', 'ladÃ£o classe a', 'Senador', 2, 1),
-(4, 'jao', '2000-06-06', 'Masculino', 'asd', 'Vereador', 1, 1);
+(4, 'jao', '2000-06-06', 'Masculino', 'asd', 'Vereador', 1, 1),
+(6, 'Arthu', '1998-11-17', 'masculino', 'Desenvolvedor Back-End', 'Presidente', 2, 1),
+(7, 'Zatopek', '1998-11-17', 'masculino', 'Desenvolvedor', 'Vereador', 19, 1),
+(8, 'Zatopek', '1998-11-17', 'masculino', 'Desenvolvedor', 'Vereador', 19, 1),
+(9, 'Zatopek', '1998-11-17', 'masculino', 'Desenvolvedor', 'Vereador', 19, 1);
 
 -- --------------------------------------------------------
 
@@ -151,11 +163,11 @@ INSERT INTO `politico` (`ID_POLITICO`, `NOME`, `DATA_NASC`, `SEXO`, `PROFISSAO`,
 --
 
 CREATE TABLE `usuario` (
-  `CPF` int(11) NOT NULL,
+  `CPF` bigint(11) NOT NULL,
   `EMAIL` varchar(30) NOT NULL,
   `SENHA` varchar(30) NOT NULL,
   `NOME` varchar(80) NOT NULL,
-  `TELEFONE` int(15) NOT NULL,
+  `TELEFONE` bigint(15) NOT NULL,
   `ENDERECO` varchar(100) NOT NULL,
   `DATA_NASC` date NOT NULL,
   `ESTADO` varchar(20) NOT NULL,
@@ -168,8 +180,8 @@ CREATE TABLE `usuario` (
 --
 
 INSERT INTO `usuario` (`CPF`, `EMAIL`, `SENHA`, `NOME`, `TELEFONE`, `ENDERECO`, `DATA_NASC`, `ESTADO`, `CIDADE`, `SEXO`) VALUES
-(1, 'asd@asd.com', '123', 'fs', 123456789, 'asdsa', '1995-02-15', 'Alagoas', 'MaceiÃ³', 'masculino'),
-(2147483647, 'asd@asd1.com', 'asd', 'asd', 999999999, 'asd', '1966-06-06', 'Alagoas', 'MaceiÃ³', 'Masculino');
+(1, 'root@app.com', 'admin', 'ADMIN', 0, '', '0000-00-00', '', '', ''),
+(11486687482, 'arthurfalcao77@gmail.com', '12345', 'Arthur JosÃ© Vasconcelos FalcÃ£o', 82996463248, 'Rua SebastiÃ£o Correia da Rocha, 296, BL 10 APT 204', '1998-11-17', 'AL', 'MaceiÃ³', 'Masculino');
 
 --
 -- Indexes for dumped tables
@@ -241,13 +253,7 @@ ALTER TABLE `partido`
 -- AUTO_INCREMENT for table `politico`
 --
 ALTER TABLE `politico`
-  MODIFY `ID_POLITICO` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
-
---
--- AUTO_INCREMENT for table `usuario`
---
-ALTER TABLE `usuario`
-  MODIFY `CPF` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2147483647;
+  MODIFY `ID_POLITICO` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=10;
 
 --
 -- Constraints for dumped tables
