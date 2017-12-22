@@ -27,6 +27,10 @@
     </div>
   </div>
       <ul id="pesquisa">
-        <li id="busca"><form action="#"><input type="text" name="busca" placeholder="Encontre na WikiLítica"></form></li>
-      </u>
+        <li id="busca">
+          <form action="#">
+            <input type="text" name="busca" placeholder="Encontre na WikiLítica">
+          </form>
+          </li>
+      </ul>
 </div>

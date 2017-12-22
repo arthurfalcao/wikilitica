@@ -23,9 +23,9 @@ if (isLogado()) {
 		</a>
 		<form class = "cadastroEstilo" name="login" action="confirma_login.php" method="post">
 			<label id="l1">Email:</label><br>
-			<input type="text" name="nEmail" id="iEmail"><br><br>
+			<input required type="text" name="nEmail" id="iEmail"><br><br>
 			<label id="l1">Senha:</label><br>
-			<input type="password" name="nSenha" id="iSenha"><br><br>
+			<input required type="password" name="nSenha" id="iSenha"><br><br>
 			<label><input style="width: 10px;" type="radio" value="Lembrar Senha"> Lembrar Senha</label>
 			<br><br>
 			<button class="btn" type="submit" name="button">Entrar</button>
