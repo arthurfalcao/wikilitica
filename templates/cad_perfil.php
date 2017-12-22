@@ -27,6 +27,10 @@ $stmt = $conn->prepare($SQL_PTD);
 $stmt->bindParam(1, $idPolitico);
 $stmt->execute();
 $canditados = $stmt->fetch(PDO::FETCH_ASSOC);
+list($dia) = explode('-', $canditados['DATA_NASC']);
+$hoje = 2017;
+$nascimento = $dia;
+$idade = $hoje - $nascimento ;
 
  ?>
 
@@ -45,7 +49,7 @@ $canditados = $stmt->fetch(PDO::FETCH_ASSOC);
 	</div>
 	<div class="corpo" id="conteudo">
   	<label class="l2">Nome: <?php echo $canditados['NOME'] ?></label><br>
-  	<label class="l2">Idade: <?php echo $canditados['DATA_NASC'] ?></label><br>
+  	<label class="l2">Idade: <?php echo $idade ?></label><br>
   	<label class="l2">Sexo: <?php echo $canditados['SEXO'] ?></label><br>
   	<label class="l2">Profissão: <?php echo $canditados['PROFISSAO'] ?></label><br>
   	<label class="l2">Função: <?php echo $canditados['FUNCAO'] ?></label><br>
