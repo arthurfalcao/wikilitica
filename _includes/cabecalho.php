@@ -16,10 +16,15 @@
         <li><a href="./templates/mostrar_lista.php">Buscar</a></li>
         <li class="dropdown"><a href="#" class="dropbtn">Contribuir</a>
           <div class="dropdown-content">
-             <a href="./templates/candidato.php">Candidatos</a>
-             <a href="./templates/partido.php">Partidos</a>
-             <a href="./templates/estado.php">Estado</a>
-             <a href="./templates/municipio.php">Município</a>
+            <?php if (isLogado()):
+              if ($_SESSION['email'] == "root@app.com"):?>
+              <a href="./templates/partido.php">Partidos</a>
+              <a href="./templates/estado.php">Estado</a>
+              <a href="./templates/municipio.php">Município</a>
+            <?php endif;
+              else: ?>
+              <a href="./templates/candidato.php">Candidatos</a>
+          <?php endif; ?>
           </div>
         </li>
         <li><a href="./templates/sobre.php">Sobre</a></li>

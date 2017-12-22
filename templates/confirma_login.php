@@ -10,7 +10,7 @@ if (empty($email) || empty($senha)) {
 	exit;
 }
 
-$SQL = "SELECT * FROM usuario WHERE email = ? AND senha = ?";
+$SQL = "SELECT email FROM usuario WHERE email = ? AND senha = ?";
 $stmt = $conn->prepare($SQL);
 $stmt->bindParam(1, $email);
 $stmt->bindParam(2, $senha);
@@ -26,8 +26,10 @@ if (count($users) <= 0) {
 
 $user = $users[0];
 
-$_SESSION['logged_in'] = true;
-$_SESSION['user_email'] = $user['EMAIL'];
+$email_sessao = $user['email'];
+
+$_SESSION['logado'] = true;
+$_SESSION['email'] = $email_sessao;
 
 echo "<script>alert('Usuário logado com sucesso');</script>";
 echo "<script language=\"javascript\">window.location=\"../index.php\";</script>";

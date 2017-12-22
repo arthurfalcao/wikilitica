@@ -1,14 +1,14 @@
 <?php
 
 function isLogado() {
-  if (!isset($_SESSION['logged_in']) || $_SESSION['logged_in'] !== true) {
+  if (!isset($_SESSION['logado']) || $_SESSION['logado'] !== true) {
     return false;
   }
   return true;
 }
 
 function setDeslogado(){
-  $_SESSION['logged_in'] = false;
+  $_SESSION['logado'] = false;
   session_destroy();
 }
 

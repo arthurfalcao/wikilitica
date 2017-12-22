@@ -1,6 +1,6 @@
-<?php
+<?php   session_start();
   require_once 'config.php';
-  session_start();
+
   if (!isLogado()) {
     echo "<script>alert('Entre para acessar.');</script>";
     echo "<script language=\"javascript\">window.location=\"login.php\";</script>";
