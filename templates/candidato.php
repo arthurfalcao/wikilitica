@@ -72,6 +72,10 @@
         <?php } ?>
 		  </select><br><br>
 			<br>
+			<label for="propostas" class="l1">Ideias e Propostas</label>
+		  	<br>
+		  	<textarea rows="10" cols="40" maxlength="500"></textarea>
+			<br>
 			<br>
 			<button type="submit" name="button" class="btn">Cadastrar</button>
 		</form>
