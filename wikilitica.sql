@@ -3,9 +3,9 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: 22-Dez-2017 às 15:56
+-- Generation Time: 23-Dez-2017 às 13:24
 -- Versão do servidor: 10.1.28-MariaDB
--- PHP Version: 7.1.11
+-- PHP Version: 7.1.10
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 SET AUTOCOMMIT = 0;
@@ -84,7 +84,9 @@ CREATE TABLE `historico` (
 
 INSERT INTO `historico` (`ID_POLITICO`, `PARTIDOS`, `CARGOS`) VALUES
 (NULL, '1', 'Presidente'),
-(9, '1', 'Vereador');
+(9, '1', 'Vereador'),
+(3, 'PT', 'Governador'),
+(3, 'PTDB', 'Dep. Federal');
 
 -- --------------------------------------------------------
 
@@ -181,7 +183,8 @@ CREATE TABLE `usuario` (
 
 INSERT INTO `usuario` (`CPF`, `EMAIL`, `SENHA`, `NOME`, `TELEFONE`, `ENDERECO`, `DATA_NASC`, `ESTADO`, `CIDADE`, `SEXO`) VALUES
 (1, 'root@app.com', 'admin', 'ADMIN', 0, '', '0000-00-00', '', '', ''),
-(11486687482, 'arthurfalcao77@gmail.com', '12345', 'Arthur JosÃ© Vasconcelos FalcÃ£o', 82996463248, 'Rua SebastiÃ£o Correia da Rocha, 296, BL 10 APT 204', '1998-11-17', 'AL', 'MaceiÃ³', 'Masculino');
+(11486687482, 'arthurfalcao77@gmail.com', '12345', 'Arthur JosÃ© Vasconcelos FalcÃ£o', 82996463248, 'Rua SebastiÃ£o Correia da Rocha, 296, BL 10 APT 204', '1998-11-17', 'AL', 'MaceiÃ³', 'Masculino'),
+(1234567891011, 'asd@asd.com', '123', 'asd', 999999999, 'asd', '1999-06-06', 'Alagoas', 'MaceiÃ³', 'Masculino');
 
 --
 -- Indexes for dumped tables

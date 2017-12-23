@@ -31,13 +31,15 @@ list($dia) = explode('-', $canditados['DATA_NASC']);
 $hoje = 2017;
 $nascimento = $dia;
 $idade = $hoje - $nascimento ;
-$SQL= "SELECT 
-HISTORICO.CARGOS,
-HISTORICO.PARTIDOS,
-
-FROM HISTORICO
+$SQL= "SELECT POLITICO.NOME, POLITICO.FUNCAO, PARTIDO.NOME AS PARTIDO_ATUAL, ESTADO.NOME AS ESTADO, HISTORICO.CARGOS, HISTORICO.PARTIDOS 
+FROM (((POLITICO
+INNER JOIN PARTIDO ON PARTIDO.ID_PARTIDO = POLITICO.PARTIDO)  
+  INNER JOIN ESTADO ON ESTADO.ID_ESTADO = POLITICO.ESTADO)
+    INNER JOIN HISTORICO ON HISTORICO.ID_POLITICO = POLITICO.ID_POLITICO)
+WHERE POLITICO.ID_POLITICO = ?
 ";
 $stmt_2 = $conn->prepare($SQL);
+$stmt_2->bindParam(1, $idPolitico);
 $stmt_2->execute();
 $historico = $stmt_2->fetch(PDO::FETCH_ASSOC);
 
@@ -64,8 +66,8 @@ $historico = $stmt_2->fetch(PDO::FETCH_ASSOC);
   	<label class="l2">Função: <?php echo $canditados['FUNCAO'] ?></label><br>
   	<label class="l2">Partido: <?php echo $canditados['PARTIDO'] ?></label><br>
   	<label class="l2">Estado: <?php echo $canditados['ESTADO'] ?></label><br>
-    <label class="l2">Histórico de Cargos: <?php echo $canditados['CARGOS'] ?></label><br>
-    <label class="l2">Histórico de Partidos: <?php echo $canditados['PARTIDOS'] ?></label><br>
+    <label class="l2">Histórico de Cargos: <?php echo $historico['CARGOS'] ?></label><br>
+    <label class="l2">Histórico de Partidos: <?php echo $historico['PARTIDOS'] ?></label><br>
     <label class="l2">Ideais e Propostas: </label><br>
 
     <button type="button" class="btn" onclick="window.location.href='/wikilitica/templates/apagar.php?id=<?php echo $canditados['ID_POLITICO'] ?>'">Apagar</button>
