@@ -51,14 +51,14 @@ $sql_result_id = $SQL->fetch(PDO::FETCH_ASSOC);
 			<img  class="imagemCaixa" src="../static/img/logo c_politco.png" alt="logo">
 		</a>
 		<form class="cadastroEstilo" name="editar" action="confedit.php" method="post">
-			<label>Editando Candidato: <?php echo utf8_encode($sql_result_id['NOME']); ?></label><br>
+			<label>Editando Candidato: <?php echo $sql_result_id['NOME']; ?></label><br>
 			<input type="hidden" name="id" value="<?php echo $id; ?>">
 			<label for="nome" class="l1">Nome</label><br>
-			<input required type="text" name="nome" id="nome" value="<?php echo utf8_encode($sql_result_id['NOME']); ?>"><br>
+			<input required type="text" name="nome" id="nome" value="<?php echo $sql_result_id['NOME']; ?>"><br>
 			<label for="sexo" class="l1">Sexo</label>
 			<label>Opção Atual: <?php echo $sql_result_id['SEXO']; ?></label><br>
 			<select required class="l1" name="sexo" id="sexo" value="<?php echo $sql_result_id['SEXO']; ?>">
-				<option>Selecione</option>
+				<option value="">Selecione</option>
 				<option>Masculino</option>
 				<option>Feminino</option>
 			</select><br><br>
@@ -69,7 +69,7 @@ $sql_result_id = $SQL->fetch(PDO::FETCH_ASSOC);
 			<label for="funcao" class="l1">Função</label>
 			<label>Opção Atual: <?php echo $sql_result_id['FUNCAO']; ?></label><br>
 			<select required class="l1" name="funcao" id="funcao" value="<?php echo $sql_result_id['FUNCAO']; ?>">
-				<option selected="selected">Selecione</option>
+				<option value="" selected="selected">Selecione</option>
         <option>Vereador</option>
 				<option>Prefeito</option>
 				<option>D.Estadual</option>
@@ -81,7 +81,7 @@ $sql_result_id = $SQL->fetch(PDO::FETCH_ASSOC);
 			<!--Deverá ter condição para definir os dados que serão exibidos Cidade ou Estado dependendo da Função-->
 			<label for="estado" class="l1">Estado</label>
 			<select required class="l1" name="estado" id="estado" value="<?php echo utf8_encode($sql_result_id['ESTADO']); ?>">
-        <option>Selecione</option>
+        <option value="">Selecione</option>
         <?php while($est = $stmt_est->fetch(PDO::FETCH_ASSOC)) { ?>
         <option value="<?php echo $est['ID_ESTADO'] ?>"><?php echo utf8_encode($est['NOME']) ?></option>
         <?php } ?>
@@ -90,9 +90,9 @@ $sql_result_id = $SQL->fetch(PDO::FETCH_ASSOC);
 			<label for="partido" class="l1">Partido atual</label>
 
 					<select required class="l1" name="partido" id="partido" value="<?php echo $sql_result_id['PARTIDO']; ?>">
-						<option value="selecione" selected="selected">Selecione</option>
+						<option value="" selected="selected">Selecione</option>
 						<?php while($ptd = $stmt_ptd->fetch(PDO::FETCH_ASSOC)) { ?>
-		        <option value="<?php echo $ptd['ID_PARTIDO'] ?>"><?php echo $ptd['SIGLA'] ?></option>
+		        <option value="<?php echo $ptd['SIGLA'] ?>"><?php echo $ptd['SIGLA'] ?></option>
 		        <?php } ?>
 				  </select><br><br>
 			<br>

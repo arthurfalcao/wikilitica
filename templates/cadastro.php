@@ -31,7 +31,7 @@ if (isLogado()) {
 			<label class="l1" for="iNome">Nome Completo</label>
 			<input required type="text" name="nNome" id="iNome"><br>
 			<label class="l1" for="iTelefone">Telefone</label>
-			<input required type="text" name="nTelefone" id="iTelefone"><br>
+			<input required type="tel" name="nTelefone" id="iTelefone"><br>
 			<label class="l1">Data de Nascimento</label>
 			<input required style="width: 40%" type="date" name="nData" id="iData"><br>
 			<label class="l1">Sexo</label>
