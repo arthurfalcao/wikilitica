@@ -28,6 +28,7 @@ $user = $users[0];
 
 $email_sessao = $user['email'];
 
+$_SESSION['superuser'] = false;
 $_SESSION['logado'] = true;
 $_SESSION['email'] = $email_sessao;
 
