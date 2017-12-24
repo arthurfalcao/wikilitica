@@ -3,9 +3,9 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: 23-Dez-2017 às 13:24
+-- Generation Time: 24-Dez-2017 às 04:03
 -- Versão do servidor: 10.1.28-MariaDB
--- PHP Version: 7.1.10
+-- PHP Version: 7.1.11
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 SET AUTOCOMMIT = 0;
@@ -21,6 +21,25 @@ SET time_zone = "+00:00";
 --
 -- Database: `wikilitica`
 --
+
+-- --------------------------------------------------------
+
+--
+-- Estrutura da tabela `admin`
+--
+
+CREATE TABLE `admin` (
+  `ID` int(11) NOT NULL,
+  `USER` varchar(30) NOT NULL,
+  `PASSWORD` varchar(30) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- Extraindo dados da tabela `admin`
+--
+
+INSERT INTO `admin` (`ID`, `USER`, `PASSWORD`) VALUES
+(1, 'admin', 'admin');
 
 -- --------------------------------------------------------
 
@@ -73,20 +92,20 @@ INSERT INTO `estado` (`ID_ESTADO`, `NOME`) VALUES
 --
 
 CREATE TABLE `historico` (
-  `ID_POLITICO` int(11) DEFAULT NULL,
-  `PARTIDOS` varchar(30) DEFAULT NULL,
-  `CARGOS` varchar(30) DEFAULT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+  `ID_HISTORICO` int(11) NOT NULL,
+  `ID_POLITICO` int(11) NOT NULL,
+  `PARTIDOS` varchar(10) NOT NULL,
+  `CARGOS` varchar(30) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 --
 -- Extraindo dados da tabela `historico`
 --
 
-INSERT INTO `historico` (`ID_POLITICO`, `PARTIDOS`, `CARGOS`) VALUES
-(NULL, '1', 'Presidente'),
-(9, '1', 'Vereador'),
-(3, 'PT', 'Governador'),
-(3, 'PTDB', 'Dep. Federal');
+INSERT INTO `historico` (`ID_HISTORICO`, `ID_POLITICO`, `PARTIDOS`, `CARGOS`) VALUES
+(5, 11, 'IFAL', 'Senador'),
+(6, 11, 'FLOW', 'Presidente'),
+(7, 11, 'IFAL', 'Vereador');
 
 -- --------------------------------------------------------
 
@@ -126,7 +145,8 @@ CREATE TABLE `partido` (
 --
 
 INSERT INTO `partido` (`ID_PARTIDO`, `ESPECTRO`, `NOME`, `SIGLA`) VALUES
-(1, 'direita', 'FLOW', 'FLOW');
+(1, 'direita', 'FLOW', 'FLOW'),
+(2, 'direita', 'Instituto Federal de Alagoas', 'IFAL');
 
 -- --------------------------------------------------------
 
@@ -142,21 +162,24 @@ CREATE TABLE `politico` (
   `PROFISSAO` varchar(30) NOT NULL,
   `FUNCAO` varchar(30) NOT NULL,
   `ESTADO` int(11) NOT NULL,
-  `PARTIDO` int(11) NOT NULL
+  `PARTIDO` int(11) NOT NULL,
+  `PROPOSTAS` varchar(250) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 --
 -- Extraindo dados da tabela `politico`
 --
 
-INSERT INTO `politico` (`ID_POLITICO`, `NOME`, `DATA_NASC`, `SEXO`, `PROFISSAO`, `FUNCAO`, `ESTADO`, `PARTIDO`) VALUES
-(1, 'Arthur José Vasconcelos Falcão', '1998-11-17', 'masculino', 'Desenvolvedor Full-Stack', 'Presidente', 2, 1),
-(3, 'Franklin', '1995-07-29', 'Selecione', 'ladÃ£o classe a', 'Senador', 2, 1),
-(4, 'jao', '2000-06-06', 'Masculino', 'asd', 'Vereador', 1, 1),
-(6, 'Arthu', '1998-11-17', 'masculino', 'Desenvolvedor Back-End', 'Presidente', 2, 1),
-(7, 'Zatopek', '1998-11-17', 'masculino', 'Desenvolvedor', 'Vereador', 19, 1),
-(8, 'Zatopek', '1998-11-17', 'masculino', 'Desenvolvedor', 'Vereador', 19, 1),
-(9, 'Zatopek', '1998-11-17', 'masculino', 'Desenvolvedor', 'Vereador', 19, 1);
+INSERT INTO `politico` (`ID_POLITICO`, `NOME`, `DATA_NASC`, `SEXO`, `PROFISSAO`, `FUNCAO`, `ESTADO`, `PARTIDO`, `PROPOSTAS`) VALUES
+(1, 'Arthur José Vasconcelos Falcão', '1998-11-17', 'masculino', 'Desenvolvedor Full-Stack', 'Presidente', 2, 1, ''),
+(3, 'Franklin', '1995-07-29', 'Selecione', 'ladÃ£o classe a', 'Senador', 2, 1, ''),
+(4, 'jao', '2000-06-06', 'Masculino', 'asd', 'Vereador', 1, 1, ''),
+(6, 'Arthu', '1998-11-17', 'masculino', 'Desenvolvedor Back-End', 'Presidente', 2, 1, ''),
+(7, 'Zatopek', '1998-11-17', 'masculino', 'Desenvolvedor', 'Vereador', 19, 1, ''),
+(8, 'Zatopek', '1998-11-17', 'masculino', 'Desenvolvedor', 'Vereador', 19, 1, ''),
+(9, 'Zatopek', '1998-11-17', 'masculino', 'Desenvolvedor', 'Vereador', 19, 1, ''),
+(10, 'Arthur FalcÃ£o', '1998-11-17', 'Masculino', 'Desenvolvedor', 'Senador', 2, 1, 'TEsrasdasdas'),
+(11, 'Zatopek12', '1998-11-17', 'Selecione', 'Corredor', 'Presidente', 1, 1, 'aadad');
 
 -- --------------------------------------------------------
 
@@ -191,6 +214,12 @@ INSERT INTO `usuario` (`CPF`, `EMAIL`, `SENHA`, `NOME`, `TELEFONE`, `ENDERECO`, 
 --
 
 --
+-- Indexes for table `admin`
+--
+ALTER TABLE `admin`
+  ADD PRIMARY KEY (`ID`);
+
+--
 -- Indexes for table `estado`
 --
 ALTER TABLE `estado`
@@ -200,7 +229,8 @@ ALTER TABLE `estado`
 -- Indexes for table `historico`
 --
 ALTER TABLE `historico`
-  ADD KEY `FK_HISTORICO` (`ID_POLITICO`);
+  ADD PRIMARY KEY (`ID_HISTORICO`),
+  ADD KEY `FK_HISTORICO_POLITICO` (`ID_POLITICO`);
 
 --
 -- Indexes for table `municipio`
@@ -235,10 +265,22 @@ ALTER TABLE `usuario`
 --
 
 --
+-- AUTO_INCREMENT for table `admin`
+--
+ALTER TABLE `admin`
+  MODIFY `ID` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+
+--
 -- AUTO_INCREMENT for table `estado`
 --
 ALTER TABLE `estado`
   MODIFY `ID_ESTADO` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=28;
+
+--
+-- AUTO_INCREMENT for table `historico`
+--
+ALTER TABLE `historico`
+  MODIFY `ID_HISTORICO` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=20;
 
 --
 -- AUTO_INCREMENT for table `municipio`
@@ -250,13 +292,13 @@ ALTER TABLE `municipio`
 -- AUTO_INCREMENT for table `partido`
 --
 ALTER TABLE `partido`
-  MODIFY `ID_PARTIDO` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+  MODIFY `ID_PARTIDO` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
 
 --
 -- AUTO_INCREMENT for table `politico`
 --
 ALTER TABLE `politico`
-  MODIFY `ID_POLITICO` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=10;
+  MODIFY `ID_POLITICO` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=12;
 
 --
 -- Constraints for dumped tables
@@ -266,7 +308,7 @@ ALTER TABLE `politico`
 -- Limitadores para a tabela `historico`
 --
 ALTER TABLE `historico`
-  ADD CONSTRAINT `FK_HISTORICO` FOREIGN KEY (`ID_POLITICO`) REFERENCES `politico` (`ID_POLITICO`);
+  ADD CONSTRAINT `FK_HISTORICO_POLITICO` FOREIGN KEY (`ID_POLITICO`) REFERENCES `politico` (`ID_POLITICO`);
 
 --
 -- Limitadores para a tabela `municipio`
