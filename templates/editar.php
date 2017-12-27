@@ -56,7 +56,6 @@ $sql_result_id = $SQL->fetch(PDO::FETCH_ASSOC);
 			<label for="nome" class="l1">Nome</label><br>
 			<input required type="text" name="nome" id="nome" value="<?php echo $sql_result_id['NOME']; ?>"><br>
 			<label for="sexo" class="l1">Sexo</label>
-			<label>Opção Atual: <?php echo $sql_result_id['SEXO']; ?></label><br>
 			<select required class="l1" name="sexo" id="sexo">
 				<option><?php echo $sql_result_id['SEXO']; ?></option>
 				<option>Masculino</option>
@@ -67,7 +66,6 @@ $sql_result_id = $SQL->fetch(PDO::FETCH_ASSOC);
 			<label for="profissao" class="l1">Profissão</label><br>
 			<input required type="text" name="profissao" id="profissao" value="<?php echo $sql_result_id['PROFISSAO']; ?>"><br>
 			<label for="funcao" class="l1">Função</label>
-			<label>Opção Atual: <?php echo $sql_result_id['FUNCAO']; ?></label><br>
 			<select required class="l1" name="funcao" id="funcao" value="">
 				<option><?php echo $sql_result_id['FUNCAO']; ?></option>
         <option>Vereador</option>
@@ -86,20 +84,15 @@ $sql_result_id = $SQL->fetch(PDO::FETCH_ASSOC);
         <option value="<?php echo $est['ID_ESTADO'] ?>"><?php echo utf8_encode($est['NOME']) ?></option>
         <?php } ?>
       </select><br><br>
-
 			<label for="partido" class="l1">Partido atual</label>
-
-					<select required class="l1" name="partido" id="partido">
-						<option value="<?php echo $sql_result_id['PARTIDO']; ?>">Selecione</option>
-						<?php while($ptd = $stmt_ptd->fetch(PDO::FETCH_ASSOC)) { ?>
-		        <option value="<?php echo $ptd['ID_PARTIDO'] ?>"><?php echo $ptd['SIGLA'] ?></option>
-		        <?php } ?>
-				  </select><br><br>
-			<br>
-			<br>
-			<br>
+			<select required class="l1" name="partido" id="partido">
+				<option value="<?php echo $sql_result_id['PARTIDO']; ?>">Selecione</option>
+				<?php while($ptd = $stmt_ptd->fetch(PDO::FETCH_ASSOC)) { ?>
+        <option value="<?php echo $ptd['ID_PARTIDO'] ?>"><?php echo $ptd['SIGLA'] ?></option>
+        <?php } ?>
+		  </select><br><br>
       <label for="propostas" class="l1">Ideias e Propostas</label>
-		  <textarea rows="10" cols="40" maxlength="500" id="propostas" name="propostas"></textarea>
+		  <textarea rows="5" cols="25" maxlength="500" id="propostas" name="propostas" class="l1" style="width: 100%;"></textarea>
 			<br>
 			<button type="submit" name="button" class="btn">Editar</button>
 		</form>
