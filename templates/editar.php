@@ -66,7 +66,7 @@ $sql_result_id = $SQL->fetch(PDO::FETCH_ASSOC);
 			<label for="profissao" class="l1">Profissão</label><br>
 			<input required type="text" name="profissao" id="profissao" value="<?php echo $sql_result_id['PROFISSAO']; ?>"><br>
 			<label for="funcao" class="l1">Função</label>
-			<select required class="l1" name="funcao" id="funcao" value="">
+			<select required class="l1" name="funcao" value="">
 				<option><?php echo $sql_result_id['FUNCAO']; ?></option>
         <option>Vereador</option>
 				<option>Prefeito</option>

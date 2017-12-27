@@ -1,0 +1,21 @@
+Wikilitica version 1.0.0
+
+Notas ao Usuário
+-----------------
+-Usuário Adm para utilizar todo o sistema de cadastro: email:root@app.com senha:admin
+
+-É nessario impotar o arquivo .sql no localhost/phpmyadmin
+
+
+Acessando o site utilizando o navegador Google Chrome
+------------------------------------------------------
+Para ver o site você precisa baixar o programa XAMPP e copiar a pasta do wikilitica para a pasta locale, após isso ativa o Apache eo Mysql, depois acessar o
+localhost/phpmyadmin e importar o arquivo sql da pasta, após isso o bando será importado, com o banco importado coloque localhost/diretório da pasta wikilitica.	
+----------------------------------------------------------------------------------------------------------------------------------------------------------------
+----------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+Copyright  FlowTeam All Rights reserved
+</>Rodrigo Camelo Silva, rodrigocamelosilva@gmail.com
+</>Joab Leite, leitejoab@gmail.com
+</>Franklin Soares, franklinmelo18@gmail.com
+</>Arthur Falcão, arthurfalcao77@gmail.com
