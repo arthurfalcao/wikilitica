@@ -221,6 +221,8 @@ li.dropdown {
   line-height: 1.42857143;
   user-select: none;
   background-image: none;
+  position: relative;
+  
 }
 
 .btn:hover {
@@ -230,4 +232,13 @@ li.dropdown {
 .img-buscar {
   width: 30%;
   margin: 3vh;
+}
+#funcao{
+    float: right;
+    position: relative;
+    top: -38px;
+    width: 50%;
+}
+#estado{
+      width: 50%;
 }
