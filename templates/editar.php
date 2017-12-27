@@ -89,18 +89,17 @@ $sql_result_id = $SQL->fetch(PDO::FETCH_ASSOC);
 
 			<label for="partido" class="l1">Partido atual</label>
 
-					<select required class="l1" name="partido" id="partido" value="<?php echo $sql_result_id['PARTIDO']; ?>">
-						<option value="" selected="selected">Selecione</option>
+					<select required class="l1" name="partido" id="partido">
+						<option value="">Selecione</option>
 						<?php while($ptd = $stmt_ptd->fetch(PDO::FETCH_ASSOC)) { ?>
-		        <option value="<?php echo $ptd['SIGLA'] ?>"><?php echo $ptd['SIGLA'] ?></option>
+		        <option value="<?php echo $ptd['ID_PARTIDO'] ?>"><?php echo $ptd['SIGLA'] ?></option>
 		        <?php } ?>
 				  </select><br><br>
 			<br>
 			<br>
 			<br>
-			<label for="propostas" class="l1">Ideias e Propostas</label>
-		  	<br>
-		  	<textarea rows="10" cols="40" maxlength="500"></textarea>
+      <label for="propostas" class="l1">Ideias e Propostas</label>
+		  <textarea rows="10" cols="40" maxlength="500" id="propostas" name="propostas"></textarea>
 			<br>
 			<button type="submit" name="button" class="btn">Editar</button>
 		</form>

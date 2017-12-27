@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: 24-Dez-2017 às 04:03
+-- Generation Time: 27-Dez-2017 às 20:56
 -- Versão do servidor: 10.1.28-MariaDB
 -- PHP Version: 7.1.11
 
@@ -105,7 +105,14 @@ CREATE TABLE `historico` (
 INSERT INTO `historico` (`ID_HISTORICO`, `ID_POLITICO`, `PARTIDOS`, `CARGOS`) VALUES
 (5, 11, 'IFAL', 'Senador'),
 (6, 11, 'FLOW', 'Presidente'),
-(7, 11, 'IFAL', 'Vereador');
+(7, 11, 'IFAL', 'Vereador'),
+(8, 6, 'IFAL', 'Presidente'),
+(9, 6, 'IFAL', 'Presidente'),
+(10, 6, 'IFAL', 'Presidente'),
+(12, 6, 'IFAL', 'Presidente'),
+(13, 6, 'FLOW', 'Presidente'),
+(15, 6, 'FLOW', 'Presidente'),
+(16, 6, 'IFAL', 'Presidente');
 
 -- --------------------------------------------------------
 
@@ -174,7 +181,7 @@ INSERT INTO `politico` (`ID_POLITICO`, `NOME`, `DATA_NASC`, `SEXO`, `PROFISSAO`,
 (1, 'Arthur José Vasconcelos Falcão', '1998-11-17', 'masculino', 'Desenvolvedor Full-Stack', 'Presidente', 2, 1, ''),
 (3, 'Franklin', '1995-07-29', 'Selecione', 'ladÃ£o classe a', 'Senador', 2, 1, ''),
 (4, 'jao', '2000-06-06', 'Masculino', 'asd', 'Vereador', 1, 1, ''),
-(6, 'Arthu', '1998-11-17', 'masculino', 'Desenvolvedor Back-End', 'Presidente', 2, 1, ''),
+(6, 'ArthuSEMBUG', '1998-11-17', 'Masculino', 'Desenvolvedor', 'Presidente', 2, 2, ''),
 (7, 'Zatopek', '1998-11-17', 'masculino', 'Desenvolvedor', 'Vereador', 19, 1, ''),
 (8, 'Zatopek', '1998-11-17', 'masculino', 'Desenvolvedor', 'Vereador', 19, 1, ''),
 (9, 'Zatopek', '1998-11-17', 'masculino', 'Desenvolvedor', 'Vereador', 19, 1, ''),
@@ -280,7 +287,7 @@ ALTER TABLE `estado`
 -- AUTO_INCREMENT for table `historico`
 --
 ALTER TABLE `historico`
-  MODIFY `ID_HISTORICO` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=20;
+  MODIFY `ID_HISTORICO` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=17;
 
 --
 -- AUTO_INCREMENT for table `municipio`
