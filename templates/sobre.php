@@ -41,7 +41,8 @@ session_start();
 						<li><a href="municipio.php" class="link1"> Municípios</a></li>
 					</ul>
 				</li>
-				<li><a href="./sobre.html " class="link1"> Sobre</a> </li><br><br>
+				<li><a href="./sobre.html " class="link1"> Sobre</a> </li>
+				<li><a href="admin.php" class="link1">Área do Administrador</a></li><br><br>
 			</ul>
 		</div>
 	</div>
